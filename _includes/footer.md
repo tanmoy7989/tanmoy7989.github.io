@@ -1,8 +1,2 @@
-
-
-Design by Tim O'Brien [t413.com](http://t413.com/)
-&mdash;
-[SinglePaged theme](https://github.com/t413/SinglePaged)
-&mdash;
-this site is [open source]({{ site.source_link }})
-
+Tanmoy Sanyal, 2020
+Original design taken from [SinglePaged theme](https://github.com/t413/SinglePaged) by [Tim O'Brien](https://github.com/t413)

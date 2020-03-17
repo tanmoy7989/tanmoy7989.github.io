@@ -7,31 +7,29 @@ safe: false
 
 ### site serving configuration ###
 exclude: [CNAME, README.md, .gitignore]
+permalink : /:year
 timezone: null
 lsi: false
 markdown: kramdown
+highlighter: rouge
 
 
 ### content configuration ###
-title:       "SinglePaged - Title: Edit me in _config.yml!"
-keywords:    "SinglePaged, jekyll, template, github, blog, single page"
-description: "A single-page template for Jekyll based blogs (like what you'd use on github pages!)"
-source_link: "https://tanmoy7989.github.io"
-favicon:     #put a path like: "img/favicon.ico"
-touch_icon:  #put a path like: "img/apple-touch-icon.png"
-google_analytics_key: 
+title:       "Tanmoy Sanyal's homepage"
+keywords:    "tba1, tba2"
+description: "Personal website"
+favicon:     "lightbulb-o"
+touch_icon:  "lightbulb-o"
+google_analytics_key: ## put YOUR key here to enable tracking! (blank to disable)
 
 
 ### template colors, used site-wide via css ###
 colors:
-  black:     '#111111'
-  white:     '#f8f8f8'
-  blue:      '#49a7e9'
-  green:     '#9bcf2f'
-  purple:    '#c869bf'
-  orange:    '#fab125'
-  turquoise: '#0fbfcf'
-
-kramdown:
-  auto_ids:  false
-
+  black:     '#0C0E0D'
+  white:     '#FFFFFF'
+  blue:      '#256697'
+  green:     '#13613A'
+  purple:    '#48397C'
+  orange:    '#CC1414'
+  turquoise: '#CBE9FC'
+  grey:      '#A9A9A9'
