@@ -72,7 +72,7 @@ def _build_site(refresh=False):
     if refresh:
         os.system("rm -rf %s" % site_dir)
 
-    cmd_str = "jekyll build --incremental --watch"
+    cmd_str = "jekyll build --incremental"
     os.system(cmd_str)
 
 
