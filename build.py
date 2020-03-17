@@ -23,14 +23,14 @@ def _build_resume(resume_type="short"):
         print("Invalid resume type %s.Skipping build" % resume_type)
         exit()
 
-    resume_content_tex_fn = os.path.join("./img/resume/%s.tex" % resume_type)
+    resume_content_tex_fn = os.path.join("./resume/%s.tex" % resume_type)
     if not os.path.isfile(resume_content_tex_fn):
         print("Resume contents for type %s not found.Skipping build" %
               resume_type)
         exit()
 
     # parse and rewrite main tex file
-    resume_main_tex_fn = os.path.abspath("./img/resume/main.tex")
+    resume_main_tex_fn = os.path.abspath("./resume/main.tex")
     try:
         with open(resume_main_tex_fn, "r") as of:
             lines = of.readlines()
@@ -44,7 +44,7 @@ def _build_resume(resume_type="short"):
 
     # change over to the resume dir and run latex
     curr_dir = os.getcwd()
-    resume_dir = os.path.abspath("./img/resume")
+    resume_dir = os.path.abspath("./resume")
     cmd_str = """
 cd %s
 pdflatex %s
@@ -54,10 +54,10 @@ cd %s
 
     # delete extra files if any
     extra_fn_types = ["aux", "log", "out", "synctex.gz"]
-    for root, dirs, files in os.walk(os.path.abspath("./img/resume")):
+    for root, dirs, files in os.walk(os.path.abspath("./resume")):
         for fn in files:
             if any([fn.endswith(ext) for ext in extra_fn_types]):
-                fn_fullname = os.path.join(os.path.abspath("./img/resume"), fn)
+                fn_fullname = os.path.join(os.path.abspath("./resume"), fn)
                 os.remove(fn_fullname)
 
 

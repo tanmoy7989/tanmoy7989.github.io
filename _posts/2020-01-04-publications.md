@@ -21,17 +21,17 @@ Link to my [Google Scholar](https://scholar.google.com/citations?user=MastYM0AAA
 
 **Multiscale analysis of hypoxemia in methemoglobin anemia** [![](img/pdf.png){:height="2%" width="2%"}][7]{:target="_blank"}<br>**Tanmoy Sanyal** and Saikat Chakraborty<br>Mathematical Biosciences, 2013, 241 (2), 167-180<br><br>
 
-[1.1]: img/publications/go_model_2019/go_model.pdf
-[1.2]: img/publications/go_model_2019/go_model_SI.pdf
-[2]: img/publications/ld_david_2019/ld_david.pdf
-[3.1]: img/publications/cg_colloid_2018/cg_colloid.pdf
-[3.2]: img/publications/cg_colloid_2018/cg_colloid_SI.pdf
-[4.1]: img/publications/benzene_water_2018/benzene_water.pdf
-[4.2]: img/publications/benzene_water_2018/benzene_water_SI.pdf
-[5.1]: img/publications/ld_polymer_2016/ld_polymer.pdf
-[5.2]: img/publications/ld_polymer_2016/ld_polymer_SI.pdf
-[6]: img/publications/methemoglobinemia_cace_2013/methemoglobinemia_cace.pdf
-[7]: img/publications/methemoglobinemia_math_biosci_2013/methemoglobinemia_math_biosci.pdf
+[1.1]: publications/go_model_2019/go_model.pdf
+[1.2]: publications/go_model_2019/go_model_SI.pdf
+[2]: publications/ld_david_2019/ld_david.pdf
+[3.1]: publications/cg_colloid_2018/cg_colloid.pdf
+[3.2]: publications/cg_colloid_2018/cg_colloid_SI.pdf
+[4.1]: publications/benzene_water_2018/benzene_water.pdf
+[4.2]: publications/benzene_water_2018/benzene_water_SI.pdf
+[5.1]: publications/ld_polymer_2016/ld_polymer.pdf
+[5.2]: publications/ld_polymer_2016/ld_polymer_SI.pdf
+[6]: publications/methemoglobinemia_cace_2013/methemoglobinemia_cace.pdf
+[7]: publications/methemoglobinemia_math_biosci_2013/methemoglobinemia_math_biosci.pdf
 
 
 
