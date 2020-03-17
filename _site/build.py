@@ -90,9 +90,11 @@ def _sync(commit_msg=None):
 
     cmd_str = """
 git add *
-git commit -m %s
+git commit -m "%s"
 git push -u origin master
     """ % commit_msg
+
+    print(cmd_str)
 
     os.system(cmd_str)
 
