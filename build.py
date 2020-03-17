@@ -120,6 +120,8 @@ _build_resume(resume_type=args.resume_type)
 # build the site
 print("\n\n\nBuilding site...")
 _build_site(refresh=args.refresh)
+if os.path.isfile("./_site/build.py"):
+    os.system("rm ./_site/build.py")
 
 # sync to github
 print("\n\n\nSyncing to github...")
