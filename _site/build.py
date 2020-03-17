@@ -116,9 +116,9 @@ print("Building resume...")
 _build_resume(resume_type=args.resume_type)
 
 # build the site
-print("Building site...")
+print("\n\n\nBuilding site...")
 _build_site(refresh=args.refresh)
 
 # sync to github
-print("Syncing to github...")
+print("\n\n\nSyncing to github...")
 _sync(commit_msg=args.commit_msg)
