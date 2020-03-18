@@ -61,16 +61,10 @@ cd %s
                 os.remove(fn_fullname)
 
 
-def _build_site(refresh=False):
+def _build_site():
     """
     Runs jekyll to build the website.
-
-    :param refresh: (bool) True to remove the _site folder before building
     """
-
-    site_dir = os.path.abspath("_site")
-    if refresh:
-        os.system("rm -rf %s" % site_dir)
 
     cmd_str = "jekyll build --incremental"
     os.system(cmd_str)
@@ -107,8 +101,6 @@ parser.add_argument("-cv", "--resume_type", default="short",
                     help="Resume type to build")
 parser.add_argument("-m", "--commit_msg",
                     help="Commit message to use for git push")
-parser.add_argument("-r", "--refresh", action="store_true",
-                    help="Raise this to remove the _site folder and rebuild")
 
 # parse user arguments
 args = parser.parse_args()
@@ -119,7 +111,7 @@ _build_resume(resume_type=args.resume_type)
 
 # build the site
 print("\n\n\nBuilding site...")
-_build_site(refresh=args.refresh)
+_build_site()
 if os.path.isfile("./_site/build.py"):
     os.system("rm ./_site/build.py")
 
