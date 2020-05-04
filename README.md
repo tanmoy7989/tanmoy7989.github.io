@@ -1,6 +1,6 @@
 ## Personal website jekyll theme:
 
-Visit the website [here](https://tanmoy7989.github.io/) 
+Visit the website [here](https://tanmoy7989.github.io/){:target="_blank"}
 
 This is adapted from a simple single-paged website template:
 [github.com/t413/SinglePaged](https://github.com/t413/SinglePaged)
