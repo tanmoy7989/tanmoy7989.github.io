@@ -16,7 +16,7 @@ highlighter: rouge
 
 ### content configuration ###
 title:       "Tanmoy's webpage"
-keywords:    "probabilistic machine learning, probabilistic graphical models, integrative modeling, DNA replisome, coarse grained molecular dynamics"
+keywords:    "probabilistic machine learning, integrative modeling of proteins, DNA replisome, chemical cross-linking, coarse grained molecular dynamics, relative entropy"
 description: "My homepage for my resume and research descriptions"
 favicon:     "flask"
 touch_icon:  "flask"
@@ -26,11 +26,5 @@ google_analytics_key: ## put YOUR key here to enable tracking! (blank to disable
 ### template colors, used site-wide via css ###
 colors:
   black:     '#0C0E0D'
+  dark:      '#073642'
   white:     '#FFFFFF'
-  blue:      '#256697'
-  green:     '#13613A'
-  purple:    '#48397C'
-  orange:    '#CC1414'
-  turquoise: '#CBE9FC'
-  grey:      '#A9A9A9'
-  silver:    '#F4EEEC'

@@ -1,6 +1,6 @@
 ---
 title: "Publications"
-bg: purple
+bg: dark
 color: white
 fa-icon: paperclip
 ---

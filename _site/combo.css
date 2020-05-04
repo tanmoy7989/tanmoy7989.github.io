@@ -472,45 +472,15 @@ html { box-sizing: border-box; }
 .text-black a { color: #0C0E0D; }
 .bg-black     { background-color: #0C0E0D !important; }
 
+.border-dark { border-color: #073642 !important; }
+.text-dark   { color: #073642; }
+.text-dark a { color: #073642; }
+.bg-dark     { background-color: #073642 !important; }
+
 .border-white { border-color: #FFFFFF !important; }
 .text-white   { color: #FFFFFF; }
 .text-white a { color: #FFFFFF; }
 .bg-white     { background-color: #FFFFFF !important; }
-
-.border-blue { border-color: #256697 !important; }
-.text-blue   { color: #256697; }
-.text-blue a { color: #256697; }
-.bg-blue     { background-color: #256697 !important; }
-
-.border-green { border-color: #13613A !important; }
-.text-green   { color: #13613A; }
-.text-green a { color: #13613A; }
-.bg-green     { background-color: #13613A !important; }
-
-.border-purple { border-color: #48397C !important; }
-.text-purple   { color: #48397C; }
-.text-purple a { color: #48397C; }
-.bg-purple     { background-color: #48397C !important; }
-
-.border-orange { border-color: #CC1414 !important; }
-.text-orange   { color: #CC1414; }
-.text-orange a { color: #CC1414; }
-.bg-orange     { background-color: #CC1414 !important; }
-
-.border-turquoise { border-color: #CBE9FC !important; }
-.text-turquoise   { color: #CBE9FC; }
-.text-turquoise a { color: #CBE9FC; }
-.bg-turquoise     { background-color: #CBE9FC !important; }
-
-.border-grey { border-color: #A9A9A9 !important; }
-.text-grey   { color: #A9A9A9; }
-.text-grey a { color: #A9A9A9; }
-.bg-grey     { background-color: #A9A9A9 !important; }
-
-.border-silver { border-color: #F4EEEC !important; }
-.text-silver   { color: #F4EEEC; }
-.text-silver a { color: #F4EEEC; }
-.bg-silver     { background-color: #F4EEEC !important; }
 
 
 /* ----- per-post colors! ----- */
@@ -518,50 +488,50 @@ html { box-sizing: border-box; }
   
   
   
-  nav .p-contact { border-color: #13613A; }
-  #contact { background-color: #13613A !important; color: #FFFFFF; }
+  nav .p-contact { border-color: #073642; }
+  #contact { background-color: #073642 !important; color: #FFFFFF; }
   #contact a { color: #FFFFFF; }
-  #contact .sectiondivider { color: #13613A; }
+  #contact .sectiondivider { color: #073642; }
 
   
   
   
-  nav .p-resume { border-color: #A9A9A9; }
-  #resume { background-color: #A9A9A9 !important; color: #0C0E0D; }
-  #resume a { color: #0C0E0D; }
-  #resume .sectiondivider { color: #A9A9A9; }
+  nav .p-resume { border-color: #073642; }
+  #resume { background-color: #073642 !important; color: #FFFFFF; }
+  #resume a { color: #FFFFFF; }
+  #resume .sectiondivider { color: #073642; }
 
   
   
   
-  nav .p-publications { border-color: #48397C; }
-  #publications { background-color: #48397C !important; color: #FFFFFF; }
+  nav .p-publications { border-color: #073642; }
+  #publications { background-color: #073642 !important; color: #FFFFFF; }
   #publications a { color: #FFFFFF; }
-  #publications .sectiondivider { color: #48397C; }
+  #publications .sectiondivider { color: #073642; }
 
   
   
   
-  nav .p-research { border-color: #F4EEEC; }
-  #research { background-color: #F4EEEC !important; color: #0C0E0D; }
-  #research a { color: #0C0E0D; }
-  #research .sectiondivider { color: #F4EEEC; }
+  nav .p-research { border-color: #073642; }
+  #research { background-color: #073642 !important; color: #FFFFFF; }
+  #research a { color: #FFFFFF; }
+  #research .sectiondivider { color: #073642; }
 
   
   
   
-  nav .p-news { border-color: #256697; }
-  #news { background-color: #256697 !important; color: #FFFFFF; }
+  nav .p-news { border-color: #073642; }
+  #news { background-color: #073642 !important; color: #FFFFFF; }
   #news a { color: #FFFFFF; }
-  #news .sectiondivider { color: #256697; }
+  #news .sectiondivider { color: #073642; }
 
   
   
   
-  nav .p-intro { border-color: #FFFFFF; }
-  #intro { background-color: #FFFFFF !important; color: #0C0E0D; }
-  #intro a { color: #0C0E0D; }
-  #intro .sectiondivider { color: #FFFFFF; }
+  nav .p-intro { border-color: #073642; }
+  #intro { background-color: #073642 !important; color: #FFFFFF; }
+  #intro a { color: #FFFFFF; }
+  #intro .sectiondivider { color: #073642; }
 
 
 

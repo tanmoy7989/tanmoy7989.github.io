@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tanmoy's webpage</title>
-	<meta name="keywords" content="probabilistic machine learning, probabilistic graphical models, integrative modeling, DNA replisome, coarse grained molecular dynamics">
+	<meta name="keywords" content="probabilistic machine learning, integrative modeling of proteins, DNA replisome, chemical cross-linking, coarse grained molecular dynamics, relative entropy">
 	<meta name="description" content="My homepage for my resume and research descriptions">
   <link rel="stylesheet" href="combo.css">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
@@ -49,7 +49,7 @@
 
 <p>Hi and welcome to my website!</p>
 
-<p>I am a postdoctoral scholar working with <a href="https://www.salilab.org/sali/" target="_blank">Prof. Andrej Sali</a> at <a href="https://www.ucsf.edu/" target="_blank">UCSF</a>. I do  integrative structure determination of large protein complexes, and also evelop computational toolchains for coupling different models of cellular structure and function, as part of the <a href="https://www.pbcconsortium.org/" target="_blank">Pancreatic Beta Cell Consortium (PBCC)</a> – a large cross-functional team of experimentalists and modelers across the US  west (UCSF, USC, UCLA, Scripps, Salk) and the east (Rutgers) coasts, Montreal (Universite de Montreal) and Sanghai (iHuman Institute at SanghaiTech), committed to developing models of the entire pancreatic beta cell in eukaryotes.</p>
+<p>I am a postdoctoral scholar working with <a href="https://www.salilab.org/sali/" target="_blank">Prof. Andrej Sali</a> at <a href="https://www.ucsf.edu/" target="_blank">UCSF</a>. I develop integrative structural models of large macromolecular protein complexes (mostly) using chemical crosslink data. As a part of the <a href="https://www.pbcconsortium.org/" target="_blank">Pancreatic Beta Cell Consortium (PBCC)</a> (a large cross-functional team of experimentalists and modelers across the US  west (UCSF, USC, UCLA, Scripps, Salk) and the east (Rutgers) coasts, Montreal (Universite de Montreal) and Sanghai (iHuman Institute at SanghaiTech), committed to developing models of the entire pancreatic beta cell in eukaryotes), I also build bayesian toolchains for multi-representation modeling to enable coherent whole-cell model construction from separate disparate models.</p>
 
 <p>I completed my PhD in Chemical Engineering with a minor in Computational Science and Engineering from <a href="https://www.chemengr.ucsb.edu/" target="_blank">UCSB</a> in 2018, supervised by <a href="https://theshelllab.org/m-scott-shell/" target="_blank">Prof. M. Scott Shell</a>. In my <a href="https://escholarship.org/uc/item/91r6f17t" target="_blank">thesis</a>, I developed novel coarse-grained models of liquid mixtures, polymers and protein folding for efficient (~30-100 times faster than detailed atomistic representation) molecular dynamics (MD) simulations, while retaining thermodynamic accuracy.</p>
 
@@ -101,17 +101,13 @@
         </div>
         
         <div class="container ">
-          <h1 id="statistical-coupling-of-sub-models-to-construct-whole-cell-models">Statistical coupling of sub-models to construct whole cell models</h1>
-
-<p>[Write text here]</p>
+          <h1 id="multi-representation-modeling">Multi-representation modeling</h1>
 
 <p><a href="https://github.com/tanmoy7989/Meta_Modeling_Demonstration_PBCC_2019" target="_blank"><strong>Github repository</strong></a><br />(Short tutorial on whole cell modeling using toy sub-models)</p>
 
 <p><br /></p>
 
-<h1 id="integrative-modeling-of-eukayotic-replisomal-protein-complexes-using-chemical-crosslinking">Integrative modeling of eukayotic replisomal protein complexes using chemical crosslinking</h1>
-
-<p>[Write text here]</p>
+<h1 id="integrative-modeling-of-eukaryotic-helicases-using-cx-ms-data">Integrative modeling of eukaryotic helicases using CX-MS data.</h1>
 
 <p><img src="research/cmgm.png" width="100%" /></p>
 
@@ -119,25 +115,21 @@
 
 <p><br /></p>
 
-<h1 id="coarse-grained-backbone-models-for-protein-folding">Coarse grained backbone models for protein folding</h1>
+<h1 id="coarse-grained-backbone-forcefields-for-md-simulations-of-protein-folding">Coarse-grained backbone forcefields for MD simulations of protein folding</h1>
 
 <p><img src="research/go_model.png" width="100%" /></p>
-
-<p>[Write text here]</p>
 
 <p><a href="https://aip.scitation.org/doi/full/10.1063/1.5108761" target="_blank"><strong>A hybrid, bottom-up, structurally accurate, Go-like coarse-grained protein model</strong></a>, Tanmoy Sanyal, Jeetain Mittal and M. Scott Shell, Journal of Chemical Physics, 2019, 151, 044111</p>
 
 <p><a href="research/resource/go_model_ff.tar">LAMMPS format forcefield file</a></p>
 
-<p><a href="https://github.com/tanmoy7989/protein_model" target="_blank"><strong>Github repository</strong></a> <br />This repository is a little sketchy; documentation will be updated soon. Also, a substantial part of this code uses the package <code class="highlighter-rouge">sim</code> written in Python-2.7. A copy can be obtained through personal request to either me or <a href="https://theshelllab.org/m-scott-shell/" target="_blank">M. Scott Shell, UCSB</a>.</p>
+<p><a href="https://github.com/tanmoy7989/protein_model" target="_blank"><strong>Github repository</strong></a> <br />This repository is a little sketchy; documentation will be updated soon. Also, a substantial part of this code uses the package <code class="highlighter-rouge">sim</code> written in Python-2.7. A copy can be obtained through personal request to <a href="https://theshelllab.org/m-scott-shell/" target="_blank">M. Scott Shell, UCSB</a>.</p>
 
 <p><br /></p>
 
-<h1 id="local-density-potentials-for-coarse-grained-molecular-dynamics">Local density potentials for coarse grained molecular dynamics</h1>
+<h1 id="mean-field-manybody-potentials-for-coarse-grained-md-simulations">Mean-field manybody potentials for coarse grained MD simulations</h1>
 
 <p><img src="research/ld.png" width="100%" /></p>
-
-<p>[Write abstract here]</p>
 
 <p><a href="https://aip.scitation.org/doi/full/10.1063/1.4958629" target="_blank"><strong>Coarse-grained models using local-density potentials optimized with the relative entropy: Application to implicit solvation</strong></a>, Tanmoy Sanyal and M. Scott ShellJournal of Chemical Physics, 2016, 145, 034109</p>
 
@@ -148,18 +140,6 @@
 <p><a href="https://github.com/tanmoy7989/Lammps_dev" target="_blank"><strong>Github repository</strong></a><br />The local density potential is also available as a <code class="highlighter-rouge">pair_style</code> in LAMMPS. <a href="https://lammps.sandia.gov/doc/pair_local_density.html">See here</a>.</p>
 
 <p><br /></p>
-
-<h1 id="multiscale-reaction-diffusion-models-of-human-respiration">Multiscale reaction-diffusion models of human respiration</h1>
-
-<p><img src="research/methemglobinemia.png" width="100%" /></p>
-
-<p>[Write text here]</p>
-
-<p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0025556412002088?via%3Dihub" target="_blank"><strong>Multiscale analysis of hypoxemia in methemoglobin anemia</strong></a>, Tanmoy Sanyal and Saikat Chakraborty, Mathematical Biosciences, 2013, 241 (2), 167-180</p>
-
-<p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0098135413000884?via%3Dihub" target="_blank"><strong>Multiscale analysis of simultaneous uptake of two reactive gases in the human lungs and its application to methemoglobin anemia</strong></a>, Tanmoy Sanyal and Saikat Chakraborty, Computers &amp; Chemical Engineering, 2013, 59 (5), 226-242<br /></p>
-
-<p>(MATLAB code available upon request)</p>
 
 
         </div>
@@ -249,7 +229,7 @@ Primary email: tanmoy [dot] 7989 [at] gmail [dot] com<br /></p>
 
 <p>School email: tanmoy [dot] sanyal [at] ucsf [dot] edu<br /></p>
 
-<p>Twitter : <a href="https://twitter.com/dotslashadotout" target="_blank">@dotslashadotout</a><br /></p>
+<p>Twitter : <a href="https://twitter.com/hiddenvariable2" target="_blank">@hiddenvariable2</a><br /></p>
 
 <p>Linkedin: <a href="https://www.linkedin.com/in/tanmoy-sanyal/" target="_blank">tanmoy-sanyal</a><br /></p>
 
