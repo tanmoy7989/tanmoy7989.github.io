@@ -1,54 +1,14 @@
-<h1 id="integrative-structure-determination-of-chromosomal-protein-complexes-from-chemical-crosslink-data">Integrative structure determination of chromosomal protein complexes from chemical crosslink data.</h1>
+<p><img src="img/my_pic_2019.png" width="100%" align="center" /></p>
 
-<p><img src="research/cmgm.png" width="100%" /></p>
+<h1 id="tanmoy-sanyal">Tanmoy Sanyal</h1>
 
-<p>I develop Bayesian inference based methods to understand the effect of model representation choices on the accuracy and precision of protein structure determined from experimental data.  In the context of protein structure modeling, <em>representation</em> can be defined as the collection of all decisions that are summarily taken before performing the computationally expensive process of conformational sampling (e.g. using molecular dynamics or monte-carlo methods), such as whether to use atomistic or coarse-grained resolution for the protein residues, what fragments of a protein complexe already have structural informational available and how to best use that information, how to account for multiple metastable states of a protein complex, and so on. I seek formal mathematical ways to pose these questions so that, they are then amenable to Bayesian statistical techniques.<br /><br /></p>
+<p>Hi and welcome to my website!</p>
 
-<p>Specificially, I investigate how to best perform rigid fragment decomposition of available structural information (such as from x-ray structures or homology models) such that the number of degrees of freedom is neither too restrictive nor too permissive during monte-carlo conformational sampling.<br /><br /></p>
+<p>I am a postdoctoral scholar working with <a href="https://www.salilab.org/sali/" target="_blank">Prof. Andrej Sali</a> at <a href="https://www.ucsf.edu/" target="_blank">UCSF</a>. I develop Bayesian inference based methods to improve integrative structure determination of protein complexes using the software framework <a href="https://integrativemodeling.org/" target="_blank">IMP</a>.  Application areas constitute chromosomal maintenance proteins and DNA helicases.</p>
 
-<p>Collaborators<br />(2019 - ) <a href="http://lab.rockefeller.edu/chait/" target="_blank">Brian Chait, Rockefeller University, New York</a><br />(2020 - ) <a href="https://www.mskcc.org/research/ski/labs/xiaolan-zhao/" target="_blank">Xiaolan Zhao, Memorial Sloan Kettering Cancer Center</a><br /></p>
+<p>I also work closely with the <a href="https://www.pbcconsortium.org/" target="_blank">Pancreatic Beta Cell Consortium (PBCC)</a>, which is a large cross-functional team of experimentalists and modelers across the US  west (UCSF, USC, UCLA, Scripps, Salk) and the east (Rutgers) coasts, Montreal (Universite de Montreal) and Sanghai (iHuman Institute at SanghaiTech), committed to studying beta cell biology. As part of the consortium, I use Bayesian networks to build integrative models of glucose induced insulin secretion which may contribute to better understanding the role of cellular enzymatic pathways and their impairments to type-II diabetes.</p>
 
-<p><br /></p>
+<p>I completed my PhD in Chemical Engineering with a minor in Computational Science and Engineering from <a href="https://www.chemengr.ucsb.edu/" target="_blank">UCSB</a> in 2018, supervised by <a href="https://theshelllab.org/m-scott-shell/" target="_blank">Prof. M. Scott Shell</a>. In my <a href="https://escholarship.org/uc/item/91r6f17t" target="_blank">thesis</a>, I developed novel coarse-grained models of liquid mixtures, polymers and protein folding for efficient (~30-100 times faster than detailed atomistic representation) molecular dynamics (MD) simulations using variational inference techniques.</p>
 
-<h1 id="meta-modeling-of-pancreatic-beta-cells"><em>Meta-modeling</em> of pancreatic beta cells</h1>
-
-<p>Bayesian meta-modeling is a tentative name for integrative modeling at cellular scales, where available data not only spans different scales, types and experimental protocols, but are also best explained by different submodels. To build the most complete, accurate and precise model for the entire pancreatic beta cell, we try to integrate different submodels as-is (together with data used to parameterize such models) using directed probabilistc graphical modeling. Current efforts are focused on combining massively simplified models of enzyme networks with a meso-scopic (i.e. partlcle based) model of secretory insulin granlues to build a metamodel of glucose-insulin dynamics.</p>
-
-<p><a href="https://github.com/tanmoy7989/Meta_Modeling_Demonstration_PBCC_2019" target="_blank"><strong>Github repository</strong></a><br />(Short tutorial on whole cell modeling using toy sub-models)</p>
-
-<p><br /></p>
-
-<h1 id="coarse-grained-backbone-forcefields-for-molecular-dynamics-simulations-of-protein-folding">Coarse-grained backbone forcefields for molecular dynamics simulations of protein folding</h1>
-
-<p><img src="research/go_model.png" width="100%" /></p>
-
-<p>Developed simplistic coarse-grained models of hydrophilic and hydrophobic poly-amino acids which can be intelligently combined to produce remarkably accurate backbone models for folding short peptide fragments as well as globular protein domains. This work was a proof of principle for protein backbone models designed from polymers using variational inference methods, and using only native contact based sidechain interactions demonstrated the potential to successfully fold 200+ residue proteins. Possible future directions include combining reduced alphabet and full alphabet sidechain interactions with aforementioned backbone forcefields to produce sequence chemistry dependent protein models.</p>
-
-<p>Collaborators (2017 - 2018):  <a href="https://engineering.lehigh.edu/faculty/jeetain-mittal" target="_blank">Jeetain Mittal, Lehigh University</a></p>
-
-<p><a href="https://aip.scitation.org/doi/full/10.1063/1.5108761" target="_blank"><strong>A hybrid, bottom-up, structurally accurate, Go-like coarse-grained protein model</strong></a>, Tanmoy Sanyal, Jeetain Mittal and M. Scott Shell, Journal of Chemical Physics, 2019, 151, 044111</p>
-
-<p><a href="research/resource/go_model_ff.tar">LAMMPS format forcefield file</a></p>
-
-<p><a href="https://github.com/tanmoy7989/protein_model" target="_blank"><strong>Github repository</strong></a> <br />This repository is a little sketchy; documentation will be updated soon. Also, a substantial part of this code uses the package <code class="highlighter-rouge">sim</code> written in Python-2.7. A copy can be obtained through personal request to <a href="https://theshelllab.org/m-scott-shell/" target="_blank">M. Scott Shell, UCSB</a>.</p>
-
-<p><br /></p>
-
-<h1 id="local-density-potentials-for-coarse-grained-molecular-dynamics-simulations-of-liquid-mixtures">Local density potentials for coarse grained molecular dynamics simulations of liquid mixtures</h1>
-
-<p><img src="research/ld.png" width="100%" /></p>
-
-<p>Developed computationally efficient manybody potentials for improving solvent models in implicit solvent simulations of polymer collapse and liquid-liquid phase separation in coarse-grained binary solutions of small hydrophobes (such as benzene or methanol in water). Depending only on the mean-field local density around solute particles, such potentials signficantly improved predictions of pair structure and clustering behavior of either component across widely varying mixture compositions. This work constitutes some of the very few structurally accurate molecular models of liquid-liquid phase separation in the chemical engineering literature.</p>
-
-<p>Collaborators (2016-2019): <a href="https://www.cpc.tu-darmstadt.de/cpc/people_3/staff_details_cpc_55425.en.jsp" target="_blank">Nico van der Vegt, TU Darmstadt</a></p>
-
-<p><a href="https://aip.scitation.org/doi/full/10.1063/1.4958629" target="_blank"><strong>Coarse-grained models using local-density potentials optimized with the relative entropy: Application to implicit solvation</strong></a>, Tanmoy Sanyal and M. Scott Shell, Journal of Chemical Physics, 2016, 145, 034109</p>
-
-<p><a href="https://pubs.acs.org/doi/10.1021/acs.jpcb.7b12446" target="_blank"><strong>Transferable coarse-grained models of liquid-liquid equilibrium using local density potentials optimized with the relative entropy</strong></a>, Tanmoy Sanyal and M. Scott Shell, Journal of Physical Chemistry B, 2018, 122 (21), 5678-5693</p>
-
-<p><a href="https://pubs.acs.org/doi/10.1021/acs.jctc.8b01170" target="_blank"><strong>Transferability of local density-assisted implicit solvation models for homogeneous fluid mixtures</strong></a>, David Rosenberger, Tanmoy Sanyal, M. Scott Shell and Nico F.A. van der Vegt, Journal of Chemical Theory and Computation, 2019, 15 (5), 2881-2895</p>
-
-<p><a href="https://github.com/tanmoy7989/Lammps_dev" target="_blank"><strong>Github repository</strong></a><br />The local density potential is also available as <a href="">a <code class="highlighter-rouge">pair_style</code> in LAMMPS</a>.(https://lammps.sandia.gov/doc/pair_local_density.html).{:target=”_blank”}</p>
-
-<p><br /></p>
+<p>Please feel free to reach out, if you have questions or comments about my research or want to collaborate.</p>
 
