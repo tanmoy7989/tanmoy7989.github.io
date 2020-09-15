@@ -9,3 +9,4 @@ The build process has been somewhat automated using the ```build.py``` script.<b
 
 * cvtype: type of resume to build using pdflatex (resume tex files are kept in the img/resume directory). Current resume types are "short" or "long"
 * commitmsg: Message to use as a commit message while pushing to github. If not selected, will automatically use a random string.
+
