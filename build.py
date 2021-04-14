@@ -23,6 +23,9 @@ def _build_resume(resume_type="short"):
         print("Invalid resume type %s.Skipping build" % resume_type)
         exit()
 
+    if resume_type == "short":
+        raise NotImplementedError("Short form resume not yet written.")
+
     resume_content_tex_fn = os.path.join("./resume/%s.tex" % resume_type)
     if not os.path.isfile(resume_content_tex_fn):
         print("Resume contents for type %s not found.Skipping build" %
@@ -97,7 +100,7 @@ git push -u origin master
 
 # user arguments
 parser = argparse.ArgumentParser("Tanmoy's personal website builder")
-parser.add_argument("-cv", "--resume_type", default="short",
+parser.add_argument("-cv", "--resume_type", default="long",
                     help="Resume type to build")
 parser.add_argument("-m", "--commit_msg",
                     help="Commit message to use for git push")
