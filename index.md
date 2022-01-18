@@ -1,8 +1,12 @@
 ---
 layout: home
 author_profile: true
+header:
+    overlay_image: assets/images/banner.gif
+title: "about me"
 ---
-
-![](_img/splash.jpeg)
-
-Hi, I'm Tanmoy. I'll write more about me here.
+Hi, I am a computational structural biologist. Look around my site. dvsvsndvsldvnsldvnsldnvs.dvsvsdvs
+dvsdv
+sdvsdv
+sdsdc
+sdc

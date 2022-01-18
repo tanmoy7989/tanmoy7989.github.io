@@ -1,8 +1,14 @@
 # main links
 main:
   - title: "research"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    url: /research
+
   - title: "resume"
-    url: "http://127.0.0.1:4000/resume"
+    sublinks:
+    - title: "one page resume"
+      url: /assets/docs/resume/tsanyal_resume.pdf
+    - title: "longer resume"
+      url: /assets/docs/resume/tsanyal_resume_long.pdf
+    
   - title: "publications"
-    url: "http://127.0.0.1:4000/publications"
+    url: /publications

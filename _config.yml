@@ -15,9 +15,9 @@ description              : "tanmoy_sanyal's personal website"
 url                      : "https://tanmoy7989.github.io"
 baseurl                  : ""
 repository               : "tanmoy7989/tanmoy7989.github.io"
-teaser                   : "/_img/logo.png"
-logo                     : "/_img/logo.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+teaser                   : "/assets/images/logo.png"
+logo                     : "/assets/images/logo.png"
+masthead_title           : #overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true #false (default)
 words_per_minute         : 200
 
@@ -73,7 +73,7 @@ baidu_site_verification  :
 # Social Sharing
 twitter:
   username               : "hiddenvariable2"
-og_image                 : "/_img/logo.png"
+og_image                 : "/assets/images/logo.png"
 # for specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -94,16 +94,15 @@ analytics:
 
 # Site Author
 author:
-  name                   : "Tanmoy Sanyal"
-  avatar                 : "_img/professional_profile_pic.jpeg"
-  bio                    : "Protein design Scientist, Novo Nordisk Research"
-  location               : "Fremont, CA"
-  email                  : "tanmoy.7989@gmail.com"
+  name                   : "Tanmoy Sanyal, PhD"
+  avatar                 : "assets/images/professional_profile_pic.jpeg"
+  bio                    : "Scientist, Novo Nordisk Research"
+  location               : "San Francisco Bay Area, CA"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:tanmoy.7989@gmail.com"
-    - label: "LinkedIn"
+    - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/tanmoy-sanyal"
     - label: "Twitter"
@@ -127,11 +126,14 @@ footer:
       url: "https://www.linkedin.com/in/tanmoy-sanyal"
 
 
+
 # Reading Files
 include:
   - .htaccess
   - _pages
-  - _img
+  - _posts
+  - _drafts
+  - assets
 exclude:
   - "*.DS_Store"
   - "*.vscode"
@@ -247,7 +249,23 @@ defaults:
       author_profile: true
       show_date: true
       date_format: "%B %-d, %Y"
-      read_time: true
+      read_time: false
+      comments: # true
+      share: false
+      related: true
+      mathjax: true
+  
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      show_date: true
+      date_format: "%B %-d, %Y"
+      read_time: false
       comments: # true
       share: true
       related: true
+      mathjax: true
