@@ -4,9 +4,11 @@ conda activate $ENVNAME
 
 bundle exec jekyll build --incremental
 git add *
-git commit -m $1
+if [ $# -eq 0 ]; then
+    msg=$(echo $RANDOM | md5sum | head -c 20)
+else
+    msg=$1
+fi
+
+git commit -m $msg
 git push origin main
-
-
-
-
