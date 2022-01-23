@@ -5,7 +5,7 @@ conda activate $ENVNAME
 bundle exec jekyll build --incremental
 git add *
 if [ $# -eq 0 ]; then
-    msg=$(echo $RANDOM | md5sum | head -c 20)
+    msg=auto_commit_msg_$(echo $RANDOM | md5sum | head -c 20)
 else
     msg=$1
 fi
