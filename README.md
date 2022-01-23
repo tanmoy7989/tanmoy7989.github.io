@@ -1,18 +1,13 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Original theme:
-https://mmistakes.github.io/minimal-mistakes/
+# hidden variables
 
-
-Many adaptions taken from:
-https://www.cross-validated.com/Personal-website-with-Minimal-Mistakes-Jekyll-Theme-HOWTO-Part-II/
-
-mathjax support based on:  https://www.cross-validated.com/How-to-render-math-on-Minimal-Mistakes/
+This is my personal website based on the immensely popular [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes) theme by [Michael Rose](https://github.com/mmistakes). 
 
 
-Dropdown naviagation bar based on:
-https://github.com/mmistakes/minimal-mistakes/issues/1801
+The drop-down navigation bar for ```resume``` was generated using modifications suggested [here](https://github.com/mmistakes/minimal-mistakes/issues/1801).
 
-issues solved in: https://github.com/taherbs/taherbs.github.io
+I borrowed several modifications to the css content from [this very helpful blog post](https://www.cross-validated.com/Personal-website-with-Minimal-Mistakes-Jekyll-Theme-HOWTO-Part-II/) by Katerina Bosko.
 
 
 
