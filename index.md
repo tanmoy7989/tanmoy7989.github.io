@@ -6,7 +6,7 @@ header:
     overlay_image: assets/images/banner.gif
 title: "about me"
 ---
-Hi, I am a computational structural biologist working on XX at Novo Nordisk Research.
+I am a computational structural biologist working on XX at Novo Nordisk Research.
 
 Before that I was a postdoc with [Andrej Sali](https://www.salilab.org/) at UCSF, where I spent three developing bayesian inference methods for integrative modeling of large protein complexes by combining models obtained from comparative and de-novo modeling with experimental data from proteomics and cryo-EM. I also dabbled in developing and implementing bayesian frameworks for whole-cell modeling with specific focus on the pancreatic beta cell.
 
