@@ -2,9 +2,9 @@
 layout: single
 author_profile: true
 header:
-    overlay_image: assets/images/banner.gif
-title: "research"
+    overlay_image: assets/images/banner.png
+title: "Research"
 permalink: /research/
 ---
 
-Will write about cool research here.
+Write about cool research here.

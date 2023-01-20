@@ -1,22 +1,15 @@
 # Theme Settings
-# available skins
-# "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 theme                    : "minimal-mistakes-jekyll"
-minimal_mistakes_skin    : "dark" 
-
+minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Basic Settings
 locale                   : "en-US"
-title                    : "hidden variables"
-title_separator          : "|"
-subtitle                 : "and other degrees of freedom"
+title                    : "Hidden Variables"
 name                     : "Tanmoy Sanyal"
 description              : "tanmoy_sanyal's personal website"
 url                      : "https://tanmoy7989.github.io"
 baseurl                  : ""
 repository               : "tanmoy7989/tanmoy7989.github.io"
-teaser                   : "/assets/images/logo.png"
-logo                     : "/assets/images/logo.png"
 masthead_title           : #overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true #false (default)
 words_per_minute         : 200
@@ -73,7 +66,7 @@ baidu_site_verification  :
 # Social Sharing
 twitter:
   username               : "hiddenvariable2"
-og_image                 : "/assets/images/logo.png"
+#og_image                 : ""
 # for specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -96,8 +89,8 @@ analytics:
 author:
   name                   : "Tanmoy Sanyal, PhD"
   avatar                 : "assets/images/professional_profile_pic.jpeg"
-  bio                    : "Scientist, Novo Nordisk Research"
-  location               : "San Francisco Bay Area, CA"
+  bio                    : "Scientist, Computational drug design / Structural biology"
+  location               : "Seattle, WA"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -113,17 +106,11 @@ author:
       url: "https://github.com/tanmoy7989"
 
 # Site Footer
-footer: 
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/hiddenvariable2"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/tanmoy7989"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/tanmoy-sanyal"
+# footer: 
+  # links:
+  #   - label: "Twitter"
+  #     icon: "fab fa-fw fa-twitter-square"
+  #     url: ""
 
 
 

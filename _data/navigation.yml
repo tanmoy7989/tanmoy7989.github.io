@@ -1,14 +1,10 @@
 # main links
 main:
-  - title: "research"
+  - title: "Research"
     url: /research
 
-  - title: "resume"
-    sublinks:
-    - title: "one page resume"
-      url: /assets/docs/resume/tsanyal_resume.pdf
-    - title: "longer resume"
-      url: /assets/docs/resume/tsanyal_resume_long.pdf
+  - title: "Resume"
+    url: /assets/docs/resume/tsanyal_resume.pdf
     
-  - title: "publications"
-    url: /publications
+  - title: "Publications"
+    url: https://scholar.google.com/citations?user=MastYM0AAAAJ&hl=en
