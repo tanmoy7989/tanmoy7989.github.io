@@ -4,7 +4,8 @@ main:
     url: /research
 
   - title: "Resume"
-    url: /assets/docs/resume/tsanyal_resume.pdf
-    
+    #url: /assets/docs/resume/tsanyal_resume.pdf
+    url: /assets/docs/resume/resume.pdf
+
   - title: "Publications"
     url: https://scholar.google.com/citations?user=MastYM0AAAAJ&hl=en

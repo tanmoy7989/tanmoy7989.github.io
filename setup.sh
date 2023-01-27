@@ -24,12 +24,15 @@ if [ ! -d $(conda info --base)/envs/$ENVNAME ]; then
     gem install jekyll bundler
 fi
 
-# fetch bundled gems
+# activate conda env
 conda activate $ENVNAME
 
+# fetch gems
 bundle install
-bundle exec jekyll build --incremental
 
+# install gulp
+# this is needed to build resume pdfs
+cd resume && yarn add gulp
 
 
 

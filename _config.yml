@@ -132,6 +132,7 @@ exclude:
   - log
   - README
   - tmp
+  - resume
 keep_files:
   - .git
 encoding: "utf-8"
