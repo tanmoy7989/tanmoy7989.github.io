@@ -15,7 +15,7 @@ bundle exec jekyll build --incremental
 sync with git
 git add *
 if [ $# -eq 0 ]; then
-    msg=auto_commit_msg_$(echo $RANDOM | md5sum | head -c 20)
+    msg=auto_commit_msg_$(echo commit_$RANDOM)
 else
     msg=$1
 fi
