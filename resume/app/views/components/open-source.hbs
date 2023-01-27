@@ -1,0 +1,22 @@
+{{#if resume.open-source.length}}
+<div class="container open-source-container">
+  {{> title value="Open Source"}}
+
+  {{#each resume.open-source}}
+    <section class="item">
+      <h5 class="bold">
+        {{#if website}}
+          <a href="{{website}}" target="_blank">
+          {{name}} <i class="fa fa-external-link" aria-hidden="true"></i>
+          </a>
+        {{else}}
+          {{name}}
+        {{/if}}
+      </h5>
+      
+      <h6>{{description}}</h6>
+
+    </section>
+  {{/each}}
+</div>
+{{/if}}

@@ -1,20 +1,16 @@
 {{#if resume.publications.length}}
 <div class="container publications-container">
-  {{> title value="Publications"}}
-
-  {{#each resume.publications}}
-  <section class="item">
-    {{> section-header name=this.name}}
-
-    {{#if publisher}}
-      <h5 class="awarder">{{publisher}}</h5>
-    {{/if}}
-
-    {{#if summary}}
-      <p class="summary">{{summary}}</p>
-    {{/if}}
-
-  </section>
-  {{/each}}
+  {{> title value="Selected Publications"}}
+    {{#each resume.publications}}
+      <ul class="minimal">
+        <section class="item">
+        <h4 class="bold clearfix">{{name}}</h4>
+        <h4>
+          <span>{{authors}}</span>,
+          <span class="publisher-name">{{publisher}}</span>,
+          <span>{{releaseDate}}</span>
+        </h4>
+      </ul>
+    {{/each}}
 </div>
 {{/if}}

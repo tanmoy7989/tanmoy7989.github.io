@@ -1,6 +1,6 @@
 {{#if resume.work.length}}
 <div class="container work-container">
-  {{> title value="Experience"}}
+  {{> title value="Research Experience"}}
 
   {{#each resume.work}}
   <section class="item">
@@ -17,7 +17,12 @@
     {{#if highlights.length}}
       <ul>
         {{#each highlights}}
-        <li>{{.}}</li>
+          <li>
+            <h4>
+              <span class="work-highlight-title">{{this.title}}</span>:
+              <span>{{this.description}}</span>
+            </h4>
+          </li>
         {{/each}}
       </ul>
     {{/if}}

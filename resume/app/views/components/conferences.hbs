@@ -1,0 +1,20 @@
+{{#if resume.conferences.length}}
+<div class="container conferences-container">
+  {{> title value="Recent conference presentations"}}
+    {{#each resume.conferences}}
+      <ul class="minimal">
+        <section class="item">
+        <h4 class="bold clearfix">
+          <span>{{name}}</span>,
+          <span>{{location}}</span>
+        </h4>
+
+        <h4>
+          (<span>{{presentation-type}}</span>): 
+          <span class="presentation-name">{{presentation-name}}</span>,
+          <span>{{releaseDate}}</span>
+        </h4>
+      </ul>
+    {{/each}}
+</div>
+{{/if}}
