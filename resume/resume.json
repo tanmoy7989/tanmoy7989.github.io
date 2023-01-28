@@ -168,17 +168,17 @@
       "highlights": [
         {
           "title": "Protein structure modeling using chemical crosslinks",
-          "description": "Modeled macromolecular protein complexes by integrating homology models + mass-spectrometry derived chemical-crosslinks + cryo-EM data. Also developed graph sampling methods to learn domain boundaries in protein complexes from crosslink data. Applications include chromosomal maintenance (SMC5/6) and repair (DNA helicase) proteins"
+          "description": "Combined Homology models + chemical-crosslinks + cryo-EM data for protein complex structure modeling; graph sampling methods to extract domain information from crosslinks. Applications include SMC and DNA helicase protein families."
         },
         
         {
           "title": "Computational mapping of nanobody epitopes",
-          "description": "Developed software to integrate chemical crosslink with escape mutation data for fast epitope determination of nanobodies on target proteins. Applications include epitope prediction of nanobodies on wild-type SARS-CoV-2 spike protein and its variants of concern"
+          "description": "Developed software to integrate chemical crosslinks with escape mutation data for protein-protein docking. Applications include epitope prediction of nanobodies on wild-type SARS-CoV-2 spike and variants."
         },
 
         {
           "title": "Whole cell models",
-          "description": "Developed Dynamic Bayesian Network (DBN) models to combine continuum scale (pharmacokinetic), particle scale (Brownian dynamics) and network scale (enzyme pathways) models of the pancreatic beta cell to build a proof-of-concept multimodal digitial twin of the beta cell. Served as software lead within the Pancreatic Beta-Cell consortium (collaborating across UCSF, USC, ShanghaiTech and HUJI)"
+          "description": "Developed Bayesian Network models to combine continuum scale (pharmacokinetic), particle scale (Brownian dynamics) and network scale (enzyme pathways) models of the pancreatic beta-cell into build a proof-of-concept multimodal digitial twin Served as software lead within the Pancreatic Beta-Cell consortium (collaborating across UCSF, USC, ShanghaiTech and HUJI)"
         }
       ]
     },
@@ -207,7 +207,7 @@
 
         {
           "title": "High Performance Computing",
-          "description": "System administrator for the Shell lab at UCSB (2016-2018). Set up 144 core Linux (Rocks 6.2) cluster and wrote utilities for automating (i) network-attached-storage management, and (ii) conflict-free compute resource sharing between lab members."
+          "description": "As system administrator, set up 144 core Linux (Rocks 6.2) cluster and wrote utilities for automating (i) network-attached-storage management, and (ii) conflict-free compute resource sharing between lab members."
         }
       ]
     }
@@ -264,13 +264,6 @@
     },
 
     {
-      "name": "Transferability of local density-assisted implicit solvation models for homogeneous fluid mixtures",
-      "publisher": "JCTC",
-      "releaseDate": "2019",
-      "authors": "D. Rosenberger, T. Sanyal, M.S. Shell & N.F.A. van der Vegt"
-    },
-
-    {
       "name": "Transferable coarse-grained models of liquid-liquid equilibrium using local density potentials optimized with the relative entropy",
       "publisher": "JPC-B",
       "releaseDate": "2018",
@@ -299,7 +292,7 @@
     },
 
     {
-      "name": "44th Indian Biophysical Society Meeting",
+      "name": "Indian Biophysical Society Meeting",
       "location": "Navi Mumbai, India",
       "presentation-type": "Talk",
       "presentation-name": "Integrative modeling of higher order complexes from binary binding modes",

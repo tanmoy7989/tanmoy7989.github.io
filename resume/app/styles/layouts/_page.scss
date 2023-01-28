@@ -17,7 +17,6 @@ body {
 
 .page {
   background: white;
-  border-top: 10px 0 solid $primary-color;
   width: 100%;
   height: 100%;
   display: block;
@@ -56,13 +55,34 @@ h1 {
 }
 
 h2 {
-font-size: 14px;
+font-size: 18px;
 }
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+h6 {
+font-size: 10px;
+}
+
 
 .work-container {
   .item {
     page-break-inside: avoid;
   }
+}
+
+.volunteer-container {
+  page-break-inside: avoid;
 }
 
 .publications-container {
