@@ -218,14 +218,15 @@
 
   "volunteer": [
     {
-      "organization": "Peer-reviewer",
-      "position": "Structure, Review of Scientific Instruments, Rapid Reviews Covid-19, Life, Biomolecules, International Journal of Molecular Sciences",
+      "organization": "Peer-review",
+      "summary": "Structure, Review of Scientific Instruments, Rapid Reviews Covid-19, Life, Biomolecules, International Journal of Molecular Sciences",
       "startDate": "2019"
     },
 
     {
-      "organization": "Co-founder, Graduate Simulation Seminar Series, UCSB",
-      "position": "Conception, organization, public outreach and long-term funding support from ChE, Materials Science and Computer Science departments.",
+      "organization": "Graduate Simulation Seminar Series, University of California Santa Barbara",
+      "position": "Co-founder",
+      "summary": "Conception, organization, public outreach and long-term funding support from ChE, Materials Science and Computer Science departments.",
       "startDate": "2014",
       "endDate": "2016"
     }
