@@ -132,6 +132,9 @@
   /* links */
   
   a {
+
+    text-decoration: none !important;
+
     &:focus {
       @extend %tab-focus;
     }
@@ -143,6 +146,8 @@
     &:hover {
       color: $link-color-hover;
       outline: 0;
+      text-decoration: underline;
+
     }
   }
   
