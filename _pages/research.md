@@ -10,24 +10,36 @@ permalink: /research/
 ## Data-driven representation of protein complexes for integrative modeling
 <img align="right" style="width:60%; margin:5px" src="../assets/images/rigid_body_cmg.png">
 
+<br>
+<hr>
+<br>
+
 ## Integrative modeling of nanobody epitopes on the SARS-CoV-2 Spike protein
 <img align="left" style="width:60%; margin:5px" src="../assets/images/nb_epitope.png">
 TODO
-<br><br><br>
 
+<br>
+<hr>
+<br>
 
 ## Integrative modeling of the SMC5/6 protein complex
 <img align="right" style="width:50%; margin:5px" src="../assets/images/smc56_structure.png">
 TODO
 collaboration with the [Zhao](https://www.mskcc.org/research/ski/labs/xiaolan-zhao), [Patel](https://www.mskcc.org/research/ski/labs/dinshaw-patel), and [Kentsis](https://www.mskcc.org/research/ski/labs/alex-kentsis) labs at Sloan Kettering, bla bla bla 
-<br><br><br>
+
+<br>
+<hr>
+<br>
 
 ## Bayesian network approaches for whole cell modeling
 <img align="left" style="width:60%; margin:5px" src="../assets/images/metamodeling.png">
 Description.
 
 The Bayesian Network framework developed in this work was presented as a [tutorial](https://github.com/tanmoy7989/bayesian_metamodeling_tutorial) implemented in PyMC3.
-<br><br><br>
+
+<br>
+<hr>
+<br>
 
 ## Coarse grained backbone forcefields for template free protein folding
 <img align="left" style="width:100%; margin:5px" src="../assets/images/protein_model.png">
@@ -40,7 +52,10 @@ Developed simplistic coarse-grained models of hydrophilic and hydrophobic poly-a
 Coarse grained backbone forcefield paramters in a LAMMPS format input file can be found [here](../assets/others/go_model_ff.tar).
 
 This work also involved the creation of a [post-processing utility](https://docs.lammps.orgTools.html#replica) that re-orders LAMMPS replica exchange trajectories (generated using `fix/temper`) by temperature.
-<br><br><br>
+
+<br>
+<hr>
+<br>
 
 ## Coarse-grained molecular models of fluid phase equilibria
 <img align="right" style="width:60%; margin:5px" src="../assets/images/localdensity.png">
