@@ -10,7 +10,7 @@ description              : "tanmoy_sanyal's personal website"
 url                      : "https://tanmoy7989.github.io"
 baseurl                  : ""
 repository               : "tanmoy7989/tanmoy7989.github.io"
-masthead_title           : #overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Tanmoy Sanyal"
 breadcrumbs              : true #false (default)
 words_per_minute         : 200
 

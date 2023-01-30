@@ -3,11 +3,11 @@ layout: home
 classes: wide
 author_profile: true
 header:
-    overlay_image: assets/images/banner.png
-    overlay_filter: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0))
+    overlay_image: assets/images/banner_rainier.jpeg
+title: " "
 ---
 
-I am a research scientist in computational chemistry and drug discovery. I work at [Novo Nordisk Research Center Seattle](href="https://www.novonordisk-us.com/about/who-we-are/seattle-wa.html"), where I design in-silico biologics for endocrine disorders using a combination of physics and machine learning approaches, and also develop scientific software and workflows for protein-protein interactions.
+I am a research scientist in computational chemistry and drug discovery. I work at [Novo Nordisk Research Center Seattle](href="https://www.novonordisk-us.com/about/who-we-are/seattle-wa.html"), where I design in-silico biologics for endocrine disorders using a combination of physics and machine learning approaches, and also develop software pipelines for protein-protein interactions.
 
 I apply (and maintain active interest in) equal parts computational chemistry, structural biology and compound design, with a healthy addition of probabilistic machine learning such as variational inference and bayesian optimization.
 

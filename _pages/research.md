@@ -2,11 +2,32 @@
 layout: single
 author_profile: true
 header:
-    overlay_image: assets/images/banner.png
-    overlay_filter: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0))
+    overlay_image: assets/images/banner_rainier.jpeg
 title: "Research"
 permalink: /research/
 ---
+
+## Data-driven representation of protein complexes for integrative modeling
+<img align="right" style="width:60%; margin:5px" src="../assets/images/rigid_body_cmg.png">
+
+## Integrative modeling of nanobody epitopes on the SARS-CoV-2 Spike protein
+<img align="left" style="width:60%; margin:5px" src="../assets/images/nb_epitope.png">
+TODO
+<br><br><br>
+
+
+## Integrative modeling of the SMC5/6 protein complex
+<img align="right" style="width:50%; margin:5px" src="../assets/images/smc56_structure.png">
+TODO
+collaboration with the [Zhao](https://www.mskcc.org/research/ski/labs/xiaolan-zhao), [Patel](https://www.mskcc.org/research/ski/labs/dinshaw-patel), and [Kentsis](https://www.mskcc.org/research/ski/labs/alex-kentsis) labs at Sloan Kettering, bla bla bla 
+<br><br><br>
+
+## Bayesian network approaches for whole cell modeling
+<img align="left" style="width:60%; margin:5px" src="../assets/images/metamodeling.png">
+Description.
+
+The Bayesian Network framework developed in this work was presented as a [tutorial](https://github.com/tanmoy7989/bayesian_metamodeling_tutorial) implemented in PyMC3.
+<br><br><br>
 
 ## Coarse grained backbone forcefields for template free protein folding
 <img align="left" style="width:100%; margin:5px" src="../assets/images/protein_model.png">
@@ -18,16 +39,12 @@ Developed simplistic coarse-grained models of hydrophilic and hydrophobic poly-a
 
 Coarse grained backbone forcefield paramters in a LAMMPS format input file can be found [here](../assets/others/go_model_ff.tar).
 
-This work also involved the creation of a [post-processing utility](https://docs.lammps.org/Tools.html#replica) that re-orders LAMMPS replica exchange trajectories (generated using `fix/temper`) by temperature.
-
-
-
-
+This work also involved the creation of a [post-processing utility](https://docs.lammps.orgTools.html#replica) that re-orders LAMMPS replica exchange trajectories (generated using `fix/temper`) by temperature.
 <br><br><br>
 
 ## Coarse-grained molecular models of fluid phase equilibria
 <img align="right" style="width:60%; margin:5px" src="../assets/images/localdensity.png">
-Developed computationally efficient manybody potentials for improving solvent models in implicit solvent systems using variational inference techniques. Benchmarked the method on folding of alkanes and liquid-liquid phase separation in coarse-grained binary solutions of small hydrophobes (such as benzene or methanol in water). Depending only on the mean-field local density around solute particles, such potentials signficantly improved predictions of pair structure and clustering behavior of either component across widely varying mixture compositions. This work constitutes one of the very few structurally accurate molecular models of liquid-liquid phase separation in the chemical engineering literature.
+Developed computationally efficient manybody potentials for improving solvent models in implicit solvent systems using variational inference techniques. Benchmarked the method on folding of alkanes and liquid-liquid phase separation in coarse-grained aueous solutions of small hydrophobes (benzene and methanol). Depending only on the mean-field local density around solute particles, such potentials signficantly improved predictions of pair structure and clustering behavior of either component across widely varying mixture compositions. This work constitutes one of the very few structurally accurate molecular models of liquid-liquid phase separation in the chemical engineering literature.
 
 - Our [first paper](https://aip.scitation.org/doi/abs/10.1063/1.4958629) introduced the mathematical and computational details of the local density potential.
 - Our [second paper](https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.7b12446) applied the method to develop thermodynamically robust models of phase behavior in benzene-water mixtures.
