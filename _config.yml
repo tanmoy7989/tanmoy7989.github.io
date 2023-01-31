@@ -126,8 +126,6 @@ exclude:
   - "*.vscode"
   - .bundle
   - config
-  - Gemfile
-  - Gemfile.lock
   - LICENSE
   - log
   - README
