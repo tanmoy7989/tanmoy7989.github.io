@@ -1,11 +1,11 @@
 # Theme Settings
 # for debugging on local machine
-theme                    : "minimal-mistakes"
+theme                    : "minimal-mistakes-jekyll"
 
 # for deploying
 #remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
 
-minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Basic Settings
 locale                   : "en-US"
