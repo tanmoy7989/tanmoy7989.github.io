@@ -2,6 +2,9 @@ ENVNAME=webenv
 eval "$(command conda 'shell.bash' 'hook' 2> /dev/null)"
 conda activate $ENVNAME
 
+# setup the correct themes
+bundle
+
 # build resume
 curr_dir=$(pwd)
 mkdir -p assets/docs/resume
