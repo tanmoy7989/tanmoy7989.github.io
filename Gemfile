@@ -4,6 +4,9 @@ source "https://rubygems.org"
 # https://github.com/jekyll/jekyll/issues/85253
 gem "webrick"
 
-gem "minimal-mistakes-jekyll"
-gem "jekyll-include-cache"
-gem "jekyll-data"
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
+
+#gem "minimal-mistakes-jekyll"
+#gem "jekyll-include-cache"
+#gem "jekyll-data"
