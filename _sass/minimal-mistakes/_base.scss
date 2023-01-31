@@ -222,7 +222,7 @@
   
   figure {
     display: -webkit-box;
-    display: flex;
+    display: block;
     -webkit-box-pack: justify;
     justify-content: space-between;
     -webkit-box-align: start;
@@ -238,6 +238,7 @@
   
     img {
       width: 100%;
+      display: block;
       border-radius: $border-radius;
       -webkit-transition: $global-transition;
       transition: $global-transition;
