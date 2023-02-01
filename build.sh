@@ -54,11 +54,12 @@ function github_sync {
     if [ -z "$1" ]; then
         msg=auto_commit_msg_$RANDOM
     else
-        msg="$1"
+        msg=$1
     fi
 
-    git commit -m ${msg}
-    git push origin main
+    git commit -m "${msg}"
+    exit 1
+    #git push origin main
 }
 
 
@@ -76,7 +77,7 @@ while getopts ':ld:h' opt; do
         build_jekyll d
         build_resume
         build_site
-        github_sync ${OPTARG}
+        github_sync "${OPTARG}"
         ;;
    
     h)
