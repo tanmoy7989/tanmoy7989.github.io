@@ -54,10 +54,10 @@ function github_sync {
     if [ -z "$1" ]; then
         msg=auto_commit_msg_$RANDOM
     else
-        msg=$1
+        msg="$1"
     fi
 
-    git commit -m "${msg}"
+    git commit -m ${msg}
     git push origin main
 }
 
