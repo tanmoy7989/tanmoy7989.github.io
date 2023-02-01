@@ -58,8 +58,7 @@ function github_sync {
     fi
 
     git commit -m "${msg}"
-    exit 1
-    #git push origin main
+    git push origin main
 }
 
 
