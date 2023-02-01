@@ -77,12 +77,11 @@ social:
     - "https://www.linkedin.com/in/tanmoy-sanyal"
 
 
-# TODO: Google Analytics
+# Google Analytics
 analytics:
   provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          : "G-6WJ02650DX"
-    optimize_id          : 
     anonymize_ip         : true # true, false (default)
 
 
