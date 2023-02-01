@@ -57,7 +57,7 @@ function github_sync {
         msg=$1
     fi
 
-    git commit -m $msg
+    git commit -m "${msg}"
     git push origin main
 }
 
@@ -94,7 +94,7 @@ while getopts ':ld:h' opt; do
             echo "Argument missing for ${OPTARG}"
         fi
         ;;
-         
+
     ?) 
       echo "Invalid option: -${OPTARG}"
       usage
