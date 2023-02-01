@@ -55,8 +55,8 @@ search                   : false
 search_provider          : lunr
 
 
-# TODO: Search-Engine-Optimization
-google_site_verification :
+# Search-Engine-Optimization
+google_site_verification : kWe0MiqWkEw4PDtuJCY_XzCAce02vtM8bvvfOWBB-t0
 bing_site_verification   :
 naver_site_verification  :
 yandex_site_verification :
