@@ -13,6 +13,6 @@ I prefer to keep the website management limited to my local machine instead of p
 
 - `setup.sh` is a script that sets up everything (conda environments too) from scratch the first time this repository is downloaded.
 
-- `update.sh` re-builds my resume, and pushes any other changes made to github. 
+- `build.sh` re-builds my resume, and pushes any other changes made to github. 
 
 If you find the combined website + resume hosting useful, feel free to fork this repository, but with appropriate citations.
