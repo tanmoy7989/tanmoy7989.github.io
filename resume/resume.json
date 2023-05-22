@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Tanmoy Sanyal",
-    "label": "Scientist, Computational drug design & Structural biology",
+    "label": "Scientist, Computational Drug Design & Structural biology",
     "location": {
       "city": "Greater Seattle area",
       "countryCode": "US",
@@ -29,6 +29,15 @@
 
   "skills": [
     {
+      "name": "Structure prediction pipelines",
+      "keywords": [
+        "AlphaFold",
+        "RFDesign",
+        "RFDiffusion"
+      ]
+    },
+
+    {
       "name": "Molecular modeling",
       "keywords": [
         "Rosetta",
@@ -38,8 +47,7 @@
         "IMP",
         "Modeller",
         "UCSF ChimeraX",
-        "PyMOL",
-        "VMD"
+        "PyMOL"
       ]
     },
 
@@ -47,17 +55,8 @@
       "name": "ML frameworks",
       "keywords": [
         "PyTorch",
-        "Tensorflow",
         "Tensorflow-probability",
         "PyMC3"
-      ]
-    },
-
-    {
-      "name": "Workflows",
-      "keywords": [
-        "Snakemake",
-        "AWS Batch"
       ]
     },
 
@@ -107,6 +106,7 @@
 
 "interests": [
   "Protein design",
+  "Non-canonical amino acids",
   "Forcefield development",
   "Amyloidogenic self assembly",
   "Whole cell models",
@@ -143,19 +143,30 @@
   "work": [
     {
       "company": "Novo Nordisk Research Center Seattle",
-      "position": "Scientist, Computational drug discovery",
+      "position": "Protein design scientist",
       "website": "https://www.novonordisk-us.com/about/who-we-are/seattle-wa.html",
       "startDate": "2022",
       "highlights": [
         {
-          "title": "Biologics Design",
-          "description": "Design of peptides and antibodies for rare endocrine disorders, and SAR (structure activity relationship) analysis based on PLMs (protein language models)"
+          "title": "Biologics design",
+          "description": "Design of peptides and antibodies for multiple therapy areas using Rosetta and AlphaFold / RFDdesign / RFDiffusion pipelines, SAR analysis based on protein language models."
         },
 
         {
-          "title": "Scientific Software development",
-          "description": "Computational workflows for automating molecular model building and MD simulation of modified peptides, such as small molecule acylations or peptide-biopolymer conjugates."
+          "title": "Method development",
+          "description": "MD forcefield design of non-canonical amino acid modifications to peptides, for mechanistic studies of half-life protraction."
+        },
+
+        {
+          "title": "Scientific software development",
+          "description": "Worked closely with AWS to re-tool AlphaFold and deploy a faster cloud-native in-house version for robust and scalable (~100k sequences) structure prediction; reguarly applied now in variant design within the company."
+        },
+
+        {
+          "title": "Leadership",
+          "description": "Program lead for refining protein interface prediction ML models in collaboration with the Institute for Protein Design at UW, Seattle.Led and evaulated a proof of concept for onboarding virtual reality based structural rendering software among collaborative teams of computational design scientists and synthetic chemists."
         }
+
       ]
     },
 
@@ -168,17 +179,17 @@
       "highlights": [
         {
           "title": "Protein structure modeling using chemical crosslinks",
-          "description": "Combined Homology models + chemical-crosslinks + cryo-EM data for protein complex structure modeling; graph sampling methods to extract domain information from crosslinks. Applications include SMC and DNA helicase protein families."
+          "description": "Homology models + chemical-crosslinks + cryo-EM data for protein complex structure modeling; graph sampling methods to extract domain information from crosslinks. Applications include SMC and DNA helicase protein families."
         },
         
         {
-          "title": "Computational mapping of nanobody epitopes",
-          "description": "Developed software to integrate chemical crosslinks with escape mutation data for protein-protein docking. Applications include epitope prediction of nanobodies on wild-type SARS-CoV-2 spike and variants."
+          "title": "Nanobody biophsyics",
+          "description": "Developed integrative docking scores for nanobody docking on target receptors (SARS-CoV-2 and variant spike proteins) using chemical crosslinking and escape mutation data. Developed design principles for increasing nanobody thermostability."
         },
 
         {
           "title": "Whole cell models",
-          "description": "Developed Bayesian Network models to combine continuum scale (pharmacokinetic), particle scale (Brownian dynamics) and network scale (enzyme pathways) models of the pancreatic beta-cell into build a proof-of-concept multimodal digitial twin Served as software lead within the Pancreatic Beta-Cell consortium (collaborating across UCSF, USC, ShanghaiTech and HUJI)"
+          "description": "Developed Bayesian Network models to combine continuum scale (pharmacokinetic), particle scale (Brownian dynamics) and network scale (enzyme pathways) models of the pancreatic beta-cell into build a proof-of-concept multimodal digitial twin. Served as software lead within the Pancreatic Beta-Cell consortium (collaborating across UCSF, USC, ShanghaiTech and HUJI)"
         }
       ]
     },
@@ -191,17 +202,12 @@
       "endDate": "2018",
       "highlights": [
         {
-          "title": "Thesis",
-          "description": "Next-Generation Coarse-Grained Models for Molecular Dynamics Simulations of Fluid Phase Equilibria and Protein Biophysics Using the Relative Entropy"
-        },
-
-        {
           "title": "Coarse-graining algorithms for bulk liquids",
           "description": "Introduced the local density potential for structurally and thermodynamically accurate coarse-grained MD simulations of liquid-liquid phase separation, which are relatively rare in the chemical engineering literature"
         },
 
         {
-          "title": "Coarse-graining algorithms for protein folding",
+          "title": "Coarse-graining algorithms for protein folding using variational inference techniques",
           "description": "Developed protein backbone models for (i) template-free folding of 200+ residue coarse-grained protein domains using MD simulations, and (ii) studying self-assembly in amyloidogenic peptides"
         },
 
@@ -219,7 +225,7 @@
   "volunteer": [
     {
       "organization": "Peer-review",
-      "summary": "Structure, Review of Scientific Instruments, Rapid Reviews Covid-19, Life, Biomolecules, International Journal of Molecular Sciences",
+      "summary": "Structure, Journal of Physical Chemistry, Proteins: Structure,Function and Bioinformatics, Review of Scientific Instruments, Rapid Reviews Covid-19, Life",
       "startDate": "2019"
     },
 
@@ -339,7 +345,7 @@
 
   "awards": [
     {
-      "title": "IUPAB best orgal presentation",
+      "title": "IUPAB best oral presentation",
       "date": "2022",
       "awarder": "44th Indian Biophysical Society Meeting"
     },

@@ -8,6 +8,12 @@ title: "Research"
 permalink: /research/
 ---
 
+## Non-canonical amino acid modifications to peptides for half-life protraction
+<img class="img-right" width="50%" src="../assets/images/novo_nordisk_generic.png">
+While fatty acid and related biopolymers have been conjugated with peptides and other biologics for half-life extension through albumin binding for almost a decade now, there are surprisingly no systematic methods or even best practices in designing the chemistry or the acylation location of such biopolymers on drug moleciules. 
+
+As a protein design scientist at Novo Nordisk Research Center Seattle, I currently focus on developing a high throughput workflow for screening biopolymers and optimizing their attachment location on peptide scaffolds that minimize undesirable interactions with the peptide or the target receptor. The problem maps directly into the more well-known problem of modifying one or more locations on peptide scaffolds into rather special non-canonical amino acids that possess long chain fatty acid sidechain groups. Thus our approach is generally applicable to designing any non-canonical modifications to biologics beyond peptides.
+
 ## Data-driven representation of protein complexes for integrative modeling
 <img class="img-right" width="50%" src="../assets/images/rigid_body_cmg.png">
 Despite recent rapid developments in protein sequence representations from language models, and some results in protein structure representation (albeit with limited success), general ideas of structure representation remain unexplored for integrative models that combine component sub-structures, in-silico structures and experimental data. 
@@ -31,7 +37,7 @@ Unlike traditional protein-protein docking methods implemented in softwares like
 The structural models were useful in understanding and validating pairwise synergy between nanobodies on the RBD, and resulted in the stratification of a repertoite of 20+ nanobodies into different groups according to their most probable target areas on the RBD surface. 
 
 - Tour de-force [paper](https://elifesciences.org/articles/73027) on the anti-SARS-CoV-2 nanobody repertoire published in eLife!
-- We are extending the molecular modeling of epitopes across known variants of concern and charting out the relative robustness of nanobodies to these variants. Stay tuned for the next paper!  
+- Recently submitted a follow-up manuscript where we extend the group classificaiton of RBD epitopes to popular variants of concern: Delta, Omicron BA.1 and BA.4. 
 
 Modeling scripts and the integrative rigid-rigid docking protocol can be found [here](https://github.com/integrativemodeling/smc56_nse256).
 
