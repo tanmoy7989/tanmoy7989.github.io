@@ -33,7 +33,8 @@
       "keywords": [
         "AlphaFold",
         "RFDesign",
-        "RFDiffusion"
+        "RFDiffusion",
+        "ProteinMPNN"
       ]
     },
 
@@ -149,7 +150,7 @@
       "highlights": [
         {
           "title": "Biologics design",
-          "description": "Design of peptides and antibodies for multiple therapy areas using Rosetta and AlphaFold / RFDdesign / RFDiffusion pipelines, SAR analysis based on protein language models."
+          "description": "Design of mini-proteins and antibodies for multiple therapy areas using Rosetta and AlphaFold / RFDdesign / RFDiffusion / ProteinMPNN pipelines, SAR analysis based on protein language models."
         },
 
         {
@@ -164,7 +165,7 @@
 
         {
           "title": "Leadership",
-          "description": "Program lead for refining protein interface prediction ML models in collaboration with the Institute for Protein Design at UW, Seattle.Led and evaulated a proof of concept for onboarding virtual reality based structural rendering software among collaborative teams of computational design scientists and synthetic chemists."
+          "description": "(i) Program lead for refining protein interface prediction ML models in collaboration with the Institute for Protein Design at UW, Seattle. (ii) Led and evaulated a proof of concept for onboarding virtual reality based structural rendering software among collaborative teams of computational design scientists and synthetic chemists."
         }
 
       ]
