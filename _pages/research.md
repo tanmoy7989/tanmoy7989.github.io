@@ -3,16 +3,16 @@ layout: single
 classes: wide
 author_profile: true
 header:
-    overlay_image: assets/images/banner_rainier.jpeg
+    overlay_image: assets/images/banner_tulips.jpg
 title: "Research"
 permalink: /research/
 ---
 
 ## Non-canonical amino acid modifications to peptides for half-life protraction
-<img class="img-right" width="50%" src="../assets/images/novo_nordisk_generic.png">
+<img class="img-right" width="50%" src="../assets/images/novonordisk_bull.jpeg">
 While fatty acid and related biopolymers have been conjugated with peptides and other biologics for half-life extension through albumin binding for almost a decade now, there are surprisingly no systematic methods or even best practices in designing the chemistry or the acylation location of such biopolymers on drug moleciules. 
 
-As a protein design scientist at Novo Nordisk Research Center Seattle, I currently focus on developing a high throughput workflow for screening biopolymers and optimizing their attachment location on peptide scaffolds that minimize undesirable interactions with the peptide or the target receptor. The problem maps directly into the more well-known problem of modifying one or more locations on peptide scaffolds into rather special non-canonical amino acids that possess long chain fatty acid sidechain groups. Thus our approach is generally applicable to designing any non-canonical modifications to biologics beyond peptides.
+As a protein design scientist within Digital Sciences and Innovation (DSI) at Novo Nordisk Research Center Seattle, I developed a high throughput computational workflow for screening biopolymers and optimizing their attachment location on peptide scaffolds that minimize undesirable interactions with the peptide or the target receptor. The problem maps directly into the more well-known problem of modifying one or more locations on peptide scaffolds into rather special non-canonical amino acids that possess long chain fatty acid sidechain groups. Thus our approach is generally applicable to designing any non-canonical modifications to biologics beyond peptides.
 
 <br>
 <hr>
