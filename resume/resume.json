@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Tanmoy Sanyal",
-    "label": "Scientist, Computational Drug Design & Structural biology",
+    "label": "Scientist, Protein Design || Structural biology",
     "location": {
       "city": "Greater Seattle area",
       "countryCode": "US",
@@ -29,10 +29,10 @@
 
   "skills": [
     {
-      "name": "Structure prediction pipelines",
+      "name": "Protein Design",
       "keywords": [
+        "Rosetta",
         "AlphaFold",
-        "RFDesign",
         "RFDiffusion",
         "ProteinMPNN"
       ]
@@ -41,7 +41,6 @@
     {
       "name": "Molecular modeling",
       "keywords": [
-        "Rosetta",
         "openMM",
         "LAMMPS",
         "GROMACS",
@@ -79,12 +78,6 @@
 
 "open-source": [
   {
-    "name": "LAMMPS",
-    "website": "https://docs.lammps.org/pair_local_density.html",
-    "description": "Local density potential"
-  },
-
-  {
     "name": "nbspike",
     "website": "https://github.com/integrativemodeling/nbspike",
     "description": "Integrative epitope prediction"
@@ -100,19 +93,23 @@
     "name": "PDB-Dev deposition",
     "website": "https://pdb-dev.wwpdb.org/entry.html?PDBDEV_00000081",
     "description": "Structure of SMC5/6"
+  },
+
+  {
+    "name": "LAMMPS",
+    "website": "https://docs.lammps.org/pair_local_density.html",
+    "description": "Local density potential"
   }
 ],
 
 
 
 "interests": [
-  "Protein design",
+  "Protein language models",
+  "Integrative structure modeling",
   "Non-canonical amino acids",
-  "Forcefield development",
-  "Amyloidogenic self assembly",
-  "Whole cell models",
-  "Bayesian networks", 
-  "Variational inference"
+  "Nanobodies",
+  "Forcefield development"
 ],
 
 
@@ -150,12 +147,7 @@
       "highlights": [
         {
           "title": "Biologics design",
-          "description": "Design of mini-proteins and antibodies for multiple therapy areas using Rosetta and AlphaFold / RFDdesign / RFDiffusion / ProteinMPNN pipelines, SAR analysis based on protein language models."
-        },
-
-        {
-          "title": "Method development",
-          "description": "MD forcefield design of non-canonical amino acid modifications to peptides, for mechanistic studies of half-life protraction."
+          "description": "(i) Design of mini-proteins and antibodies for multiple therapy areas using Rosetta and AlphaFold / RFDiffusion / ProteinMPNN pipelines (ii) SAR analysis based on protein language models. (iii) Optimizing non-canonical modifications to peptides for half-life protraction."
         },
 
         {
