@@ -6,7 +6,7 @@ header:
 title: " "
 ---
 
-I am a protein design scientist within [Digital Science and Innovation at Novo Nordisk](https://www.novonordisk.com/careers/career-areas/research-and-development/digital-science-and-innovation-careers.html). I design miniproteins and non-canonical peptides for multiple therapy areas using a combination of physics- and machine-learning-based approaches.
+I am a senior protein design scientist within [] at Amgen. Previously, I worked at [Digital Science and Innovation at Novo Nordisk](https://www.novonordisk.com/careers/career-areas/research-and-development/digital-science-and-innovation-careers.html), designing miniproteins and non-canonical peptides for multiple therapy areas using a combination of physics- and machine-learning-based approaches.
 
 Before transitioning from academia, I spent three years (2019-2021) as a postdoctoral scholar at the [Andrej Sali laboratory](https://salilab.org/) at University of California San Francisco, working on integrative modeling of large protein complexes, drug-pathogen interactions and glucose-insulin dynamics in pancreatic beta cells. I continue to collaborate on nanobody-based therapies with the [Rout](https://www.rockefeller.edu/our-scientists/heads-of-laboratories/896-michael-p-rout/) and [Chait](https://www.rockefeller.edu/our-scientists/heads-of-laboratories/902-brian-t-chait/) labs at Rockefeller University, NYC and the [Aitchison](https://www.seattlechildrens.org/research/centers-programs/global-infectious-disease-research/research-areas-and-labs/aitchison-lab/) lab at Seattle Children's Center for Global Infectious Disease Research. 
 

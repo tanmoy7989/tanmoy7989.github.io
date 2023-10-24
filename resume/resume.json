@@ -140,10 +140,17 @@
 
   "work": [
     {
+      "company": "Amgen",
+      "position": "Senior protein design scientist",
+      "website": "",
+      "startDate": "2023"
+    },
+    
+    {
       "company": "Novo Nordisk Research Center Seattle",
       "position": "Protein design scientist",
-      "website": "https://www.novonordisk-us.com/about/who-we-are/seattle-wa.html",
       "startDate": "2022",
+      "endDate": "2023",
       "highlights": [
         {
           "title": "Biologics design",
