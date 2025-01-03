@@ -1,0 +1,25 @@
+{
+  "author": "Tanmoy Sanyal",
+  "name": "jsonresume-theme-caffeine-tanmoy7989",
+  "description": "Customized Caffeine theme for JSON Resume",
+  "private": true,
+  
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "del": "^5.1.0",
+    "jshint-stylish": "^2.2.1",
+    "lazypipe": "^1.0.1",
+    "opn": "^6.0.0",
+    "require-dir": "^1.2.0",
+    "serve-index": "^1.8.0",
+    "yargs": "^15.0.2"
+  },
+
+  "dependencies": {
+    "address-format": "0.0.3",
+    "handlebars": "^4.0.5",
+    "handlebars-wax": "^6.1.0",
+    "moment": "^2.17.1",
+    "swag": "^0.7.0"
+  }
+}

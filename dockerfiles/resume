@@ -1,0 +1,37 @@
+FROM node:alpine
+
+# set working directory
+WORKDIR /usr/src/app
+
+# copy over all required stuff
+COPY ../resume/index.js /usr/src/app/resume/index.js
+COPY ../resume/package.json /usr/src/app/resume/package.json
+ADD ../resume/theme /usr/src/app/resume/theme/
+
+# install chromium (for puppeteer)
+RUN apk add --no-cache chromium 
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+
+# install mscorefonts
+RUN apk -U update && \
+  apk add --no-cache msttcorefonts-installer ghostscript-fonts fontconfig && \
+  update-ms-fonts && \
+  fc-cache -fv
+
+# install custom fonts
+RUN i=1; \
+  while IFS= read -r url; do \
+    wget "$url" -O custom-font-$i.ttf --no-check-certificate && \
+    install -m644 custom-font-$i.ttf /usr/share/fonts/truetype/ && \
+    rm custom-font-$i.ttf; \
+    i=$((i+1)); \
+  done < /usr/src/app/resume/theme/required_fonts.txt
+
+RUN fc-cache -fv
+
+# install resume dependencies
+RUN cd /usr/src/app/resume && npm install
+
+# Expose port 4000
+EXPOSE 4000

@@ -1,65 +1,39 @@
-const
-  fs = require('fs'),
-  handlebars = require('handlebars'),
-  handlebarsWax = require('handlebars-wax'),
-  addressFormat = require('address-format'),
-  moment = require('moment'),
-  Swag = require('swag');
+import { promises as fs } from 'fs'
+import * as theme from 'jsonresume-theme-local'
+import puppeteer from 'puppeteer'
+import { render } from 'resumed'
 
-Swag.registerHelpers(handlebars);
+const themePkg =  'theme/index.js';
 
-handlebars.registerHelper({
-  removeProtocol: function (url) {
-    return url.replace(/.*?:\/\//g, '');
-  },
+// render html
+const resume = JSON.parse(await fs.readFile('content/resume.json', 'utf-8'))
+const html = await render(resume, theme)
+await fs.writeFile("content/resume.html", html)
 
-  concat: function () {
-    let res = '';
+// render pdf (using puppeteer + chromium)
+const browser = await puppeteer.launch({
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--font-render-hinting=medium']
+})
 
-    for (let arg in arguments) {
-      if (typeof arguments[arg] !== 'object') {
-        res += arguments[arg];
-      }
-    }
+const page = await browser.newPage()
 
-    return res;
-  },
+await page.emulateMediaType(
+    (themePkg.pdfRenderOptions && themePkg.pdfRenderOptions.mediaType) ||
+      'screen',
+);
 
-  formatAddress: function (address, city, region, postalCode, countryCode) {
-    let addressList = addressFormat({
-      address: address,
-      city: city,
-      subdivision: region,
-      postalCode: postalCode,
-      countryCode: countryCode
-    });
+await page.setContent(html, { waitUntil: 'networkidle0' })
 
-
-    return addressList.join('<br/>');
-  },
-
-  formatDate: function (date) {
-    return moment(date).format('MM/YYYY');
-  }
-});
-
-
-function render(resume) {
-  let dir = __dirname + '/public',
-    css = fs.readFileSync(dir + '/styles/main.css', 'utf-8'),
-    resumeTemplate = fs.readFileSync(dir + '/views/resume.hbs', 'utf-8');
-
-  let Handlebars = handlebarsWax(handlebars);
-
-  Handlebars.partials(dir + '/views/partials/**/*.{hbs,js}');
-  Handlebars.partials(dir + '/views/components/**/*.{hbs,js}');
-
-  return Handlebars.compile(resumeTemplate)({
-    css: css,
-    resume: resume
-  });
+if (themePkg.pdfViewport) {
+    await page.setViewport(themePkg.pdfViewport);
 }
 
-module.exports = {
-  render: render
-};
+await page.pdf({
+    path: 'content/resume.pdf',
+    format: 'letter',
+    printBackground: true,
+    ...themePkg.pdfRenderOptions,
+  });
+
+await browser.close()

@@ -1,14 +1,14 @@
 #!/bin/bash
 
+# docker container image
+DOCKER_SITE_IMG=tsanyal-website:latest
+DOCKER_RESUME_IMG=tsanyal-resume:latest
+DOCKER_MNT_PATH=/usr/src/app
+
 # paths
 BUILD_DATA_PATH=build_data
 RESUME_DATA_PATH=resume
 CURR_PATH=$(pwd)
-
-# setup environment
-ENVNAME=webenv
-eval "$(command conda 'shell.bash' 'hook' 2> /dev/null)"
-conda activate $ENVNAME
 
 # usage
 function usage {
@@ -16,13 +16,11 @@ function usage {
 }
 
 # jekyll requirements (gemfile and config)
-function build_jekyll {
+function get_config {
     if [ $1 == "l" ]; then
         cp $BUILD_DATA_PATH/config.local.yml ./_config.yml
-        cp $BUILD_DATA_PATH/Gemfile.local ./Gemfile
     elif [ $1 == "d" ]; then
         cp $BUILD_DATA_PATH/config.deploy.yml ./_config.yml
-        cp $BUILD_DATA_PATH/Gemfile.deploy ./Gemfile
     else
         echo Unknown build option $1
     fi
@@ -30,31 +28,37 @@ function build_jekyll {
     if [[ -f Gemfile.lock ]]; then
         rm -f Gemfile.lock
     fi
-
-    bundle
 }
 
 # build resume
 function build_resume {
     mkdir -p assets/docs/resume
-    cd $RESUME_DATA_PATH && npm run export
-    mv resume.pdf ../assets/docs/resume/
-    cd $CURR_PATH 
+    docker run --rm -it \
+        -u 1000:1000 \
+        -v $(pwd)/resume/content:$DOCKER_MNT_PATH/resume/content \
+        $DOCKER_RESUME_IMG \
+        sh -c "cd resume && npm run render"
+    mv resume/content/resume.pdf assets/docs/resume/
+    mv resume/content/resume.html assets/docs/resume/
 }
 
 # site 
 function build_site {
     rm -rf _site
-    bundle exec jekyll build --incremental
+    docker run --rm -it \
+        -u 1000:1000 \
+        -v $(pwd):$DOCKER_MNT_PATH \
+        $DOCKER_SITE_IMG \
+        sh -c "bundle exec jekyll build --incremental"
 }
 
 # sync with github
 function github_sync {
     git add *
-    if [ -z "$1" ]; then
+    if [ -z "$2" ]; then
         msg=auto_commit_msg_$RANDOM
     else
-        msg=$1
+        msg=$2
     fi
 
     git commit -m "${msg}"
@@ -66,14 +70,20 @@ function github_sync {
 while getopts ':ld:h' opt; do
   case "$opt" in
     l)
-        build_jekyll l
+        echo "Building site locally"
+        get_config l
         build_resume
         build_site
-        jekyll serve
+        docker run --rm -it \
+            -u 1000:1000 \
+            -p 4000:4000 \
+            -v $(pwd):$DOCKER_MNT_PATH \
+            $DOCKER_SITE_IMG \
+            sh -c "bundle exec jekyll serve --watch -H 0.0.0.0"
         ;;
     d)
         echo "Deploying site to github"
-        build_jekyll d
+        get_config d
         build_resume
         build_site
         github_sync "${OPTARG}"
@@ -86,7 +96,8 @@ while getopts ':ld:h' opt; do
     
     :)
         if [ $OPTARG == "d" ]; then
-            build_jekyll d
+            echo "Deploying site to github"
+            get_config d
             build_resume
             build_site
             github_sync

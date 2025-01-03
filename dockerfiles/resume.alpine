@@ -1,0 +1,25 @@
+FROM node:23-alpine3.20
+
+# set working directory
+WORKDIR /usr/src/app
+
+# install puppeteer dependencies
+RUN apk add --no-cache chromium
+
+RUN apk --no-cache add msttcorefonts-installer fontconfig && \
+  update-ms-fonts && \
+  fc-cache -f
+
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+ENV RESUME_PUPPETEER_NO_SANDBOX=1
+
+# install resume dependencies
+COPY ../resume/index.js /usr/src/app/resume/index.js
+COPY ../resume/package.json /usr/src/app/resume/package.json
+ADD ../resume/theme /usr/src/app/resume/theme/
+
+RUN cd /usr/src/app/resume && npm install
+
+# Expose port 4000
+EXPOSE 4000
