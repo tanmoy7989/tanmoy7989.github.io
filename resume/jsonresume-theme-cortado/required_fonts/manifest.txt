@@ -1,0 +1,8 @@
+josefin-sans
+josefin-sans-italic
+lato-light
+lato-light-italic
+lato-regular
+lato-italic
+lato-bold
+lato-bold-italic

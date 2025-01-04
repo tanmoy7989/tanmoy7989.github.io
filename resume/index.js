@@ -1,9 +1,9 @@
 import { promises as fs } from 'fs'
-import * as theme from 'jsonresume-theme-local'
+import * as theme from 'jsonresume-theme-cortado'
 import puppeteer from 'puppeteer'
 import { render } from 'resumed'
 
-const themePkg =  'theme/index.js';
+const themePkg =  'jsonresume-theme-cortado/index.js';
 
 // render html
 const resume = JSON.parse(await fs.readFile('content/resume.json', 'utf-8'))

@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 # copy over all required stuff
 COPY ../resume/index.js /usr/src/app/resume/index.js
 COPY ../resume/package.json /usr/src/app/resume/package.json
-ADD ../resume/theme /usr/src/app/resume/theme/
+ADD ../resume/jsonresume-theme-cortado /usr/src/app/resume/jsonresume-theme-cortado/
 
 # install chromium (for puppeteer)
 RUN apk add --no-cache chromium 
@@ -15,19 +15,17 @@ ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 
 # install mscorefonts
 RUN apk -U update && \
-  apk add --no-cache msttcorefonts-installer ghostscript-fonts fontconfig && \
+  apk add --no-cache msttcorefonts-installer fontconfig && \
   update-ms-fonts && \
   fc-cache -fv
 
-# install custom fonts
-RUN i=1; \
-  while IFS= read -r url; do \
-    wget "$url" -O custom-font-$i.ttf --no-check-certificate && \
-    install -m644 custom-font-$i.ttf /usr/share/fonts/truetype/ && \
-    rm custom-font-$i.ttf; \
-    i=$((i+1)); \
-  done < /usr/src/app/resume/theme/required_fonts.txt
+# install required font families (Josefin-Sans and Lato)
+RUN \
+  while IFS= read -r fontname; do \
+    cp /usr/src/app/resume/jsonresume-theme-cortado/required_fonts/$fontname.ttf /usr/share/fonts/truetype/ ; \
+  done < /usr/src/app/resume/jsonresume-theme-cortado/required_fonts/manifest.txt
 
+# update font cache one more time
 RUN fc-cache -fv
 
 # install resume dependencies

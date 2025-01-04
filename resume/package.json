@@ -2,11 +2,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "render": "node index.js"
+    "export": "node index.js"
   },
   
   "dependencies": {
-    "jsonresume-theme-local": "file:./theme",
+    "jsonresume-theme-cortado": "file:./jsonresume-theme-cortado",
     "resumed": "^3.0.0",
     "puppeteer": "^22.8.2"
   }

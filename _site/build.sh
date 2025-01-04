@@ -37,7 +37,7 @@ function build_resume {
         -u 1000:1000 \
         -v $(pwd)/resume/content:$DOCKER_MNT_PATH/resume/content \
         $DOCKER_RESUME_IMG \
-        sh -c "cd resume && npm run render"
+        sh -c "cd resume && npm run export"
     mv resume/content/resume.pdf assets/docs/resume/
     mv resume/content/resume.html assets/docs/resume/
 }
