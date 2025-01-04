@@ -141,7 +141,7 @@
   "work": [
     {
       "company": "Amgen",
-      "position": "Senior protein design scientist",
+      "position": "Principal protein design scientist",
       "website": "",
       "startDate": "2023"
     },
@@ -160,11 +160,6 @@
         {
           "title": "Scientific software development",
           "description": "Worked closely with AWS to re-tool AlphaFold and deploy a faster cloud-native in-house version for robust and scalable (~100k sequences) structure prediction; reguarly applied now in variant design within the company."
-        },
-
-        {
-          "title": "Leadership",
-          "description": "(i) Program lead for refining protein interface prediction ML models in collaboration with the Institute for Protein Design at UW, Seattle. (ii) Led and evaulated a proof of concept for onboarding virtual reality based structural rendering software among collaborative teams of computational design scientists and synthetic chemists."
         }
 
       ]
