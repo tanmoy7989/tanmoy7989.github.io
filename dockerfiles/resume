@@ -1,12 +1,12 @@
 FROM node:alpine
 
 # set working directory
-WORKDIR /usr/src/app
+WORKDIR /home
 
 # copy over all required stuff
-COPY ../resume/index.js /usr/src/app/resume/index.js
-COPY ../resume/package.json /usr/src/app/resume/package.json
-ADD ../resume/jsonresume-theme-cortado /usr/src/app/resume/jsonresume-theme-cortado/
+COPY ../resume/index.js /home/index.js
+COPY ../resume/package.json /home/package.json
+ADD ../resume/jsonresume-theme-cortado /home/jsonresume-theme-cortado/
 
 # install chromium (for puppeteer)
 RUN apk add --no-cache chromium 
@@ -22,14 +22,14 @@ RUN apk -U update && \
 # install required font families (Josefin-Sans and Lato)
 RUN \
   while IFS= read -r fontname; do \
-    cp /usr/src/app/resume/jsonresume-theme-cortado/required_fonts/$fontname.ttf /usr/share/fonts/truetype/ ; \
-  done < /usr/src/app/resume/jsonresume-theme-cortado/required_fonts/manifest.txt
+    cp /home/jsonresume-theme-cortado/required_fonts/$fontname.ttf /usr/share/fonts/truetype/ ; \
+  done < /home/jsonresume-theme-cortado/required_fonts/manifest.txt
 
 # update font cache one more time
 RUN fc-cache -fv
 
 # install resume dependencies
-RUN cd /usr/src/app/resume && npm install
+RUN cd /home && npm install
 
 # Expose port 4000
 EXPOSE 4000

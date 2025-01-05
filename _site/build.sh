@@ -3,12 +3,12 @@
 # docker container image
 DOCKER_SITE_IMG=tsanyal-website:latest
 DOCKER_RESUME_IMG=tsanyal-resume:latest
-DOCKER_MNT_PATH=/usr/src/app
+DOCKER_MNT_PATH=/home
 
 # paths
-BUILD_DATA_PATH=build_data
-RESUME_DATA_PATH=resume
-CURR_PATH=$(pwd)
+CONFIG_PATH=configs
+RESUME_CONTENT_PATH=resume/content
+RESUME_ASSETS_PATH=assets/docs/resume
 
 # usage
 function usage {
@@ -18,11 +18,12 @@ function usage {
 # jekyll requirements (gemfile and config)
 function get_config {
     if [ $1 == "l" ]; then
-        cp $BUILD_DATA_PATH/config.local.yml ./_config.yml
+        cp $CONFIG_PATH/config.local.yml ./_config.yml
     elif [ $1 == "d" ]; then
-        cp $BUILD_DATA_PATH/config.deploy.yml ./_config.yml
+        cp $CONFIG_PATH/config.deploy.yml ./_config.yml
     else
-        echo Unknown build option $1
+        echo Unknown config build option $1
+        exit 1
     fi
 
     if [[ -f Gemfile.lock ]]; then
@@ -32,14 +33,14 @@ function get_config {
 
 # build resume
 function build_resume {
-    mkdir -p assets/docs/resume
+    mkdir -p $RESUME_ASSETS_PATH
     docker run --rm -it \
         -u 1000:1000 \
-        -v $(pwd)/resume/content:$DOCKER_MNT_PATH/resume/content \
+        -v $(pwd)/$RESUME_CONTENT_PATH:$DOCKER_MNT_PATH/content \
         $DOCKER_RESUME_IMG \
-        sh -c "cd resume && npm run export"
-    mv resume/content/resume.pdf assets/docs/resume/
-    mv resume/content/resume.html assets/docs/resume/
+        sh -c "npm run export"
+    mv $RESUME_CONTENT_PATH/resume.pdf $RESUME_ASSETS_PATH
+    mv $RESUME_CONTENT_PATH/resume.html $RESUME_ASSETS_PATH
 }
 
 # site 

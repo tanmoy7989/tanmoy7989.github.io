@@ -1,10 +1,10 @@
 FROM ruby:3.2
 
 # set working directory
-WORKDIR /usr/src/app
+WORKDIR /home
 
 # install required ruby gems
-COPY ../Gemfile /usr/src/app/
+COPY ../Gemfile /home/
 RUN bundle install
 
 # Expose port 4000
