@@ -11,10 +11,26 @@ const html = await render(resume, theme)
 await fs.writeFile("content/resume.html", html)
 
 // render pdf (using puppeteer + chromium)
+const args = [
+  "--no-sandbox",
+  "--disable-setuid-sandbox",
+  "--disable-dev-shm-usage",
+  "--disable-accelerated-2d-canvas",
+  "--no-first-run",
+  "--no-zygote",
+  "--single-process",
+  "--disable-gpu",
+  "--disable-software-rasterizer",
+  "--font-render-hinting=medium"
+];
+
 const browser = await puppeteer.launch({
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--font-render-hinting=medium']
-})
+  headless: true,
+  executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+  args,
+  //dumpio: true,
+});
+
 
 const page = await browser.newPage()
 

@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:alpine3.18
 
 # set working directory
 WORKDIR /home
@@ -11,7 +11,7 @@ ADD ../resume/jsonresume-theme-cortado /home/jsonresume-theme-cortado/
 # install chromium (for puppeteer)
 RUN apk add --no-cache chromium 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 # install mscorefonts
 RUN apk -U update && \
