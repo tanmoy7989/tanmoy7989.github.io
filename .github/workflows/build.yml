@@ -6,11 +6,8 @@ on:
   
   workflow_dispatch:
 
-# permissions:
-#   actions: read|write
-#   contents: read|write
-#   pages: read|write
-#   id-token: write
+permissions:
+  packages: read
 
 jobs:
   checkout:
