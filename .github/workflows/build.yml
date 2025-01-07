@@ -13,9 +13,18 @@ permissions:
   id-token: write
 
 jobs:
+  checkout-repo:
+    name: checkout repo
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+
   build-my-resume:
     name: build my resume
     runs-on: ubuntu-latest
+    needs: checkout-repo
 
     container:
       image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
@@ -26,9 +35,6 @@ jobs:
         - ${{ github.workspace }}/resume/content:/home/content
     
     steps:
-      - name: checkout repository
-        uses: actions/checkout@v2
-
       - name: run docker container
         uses: addnab/docker-run-action@v3
         with:
@@ -44,7 +50,9 @@ jobs:
   deploy-website:
     name: deploy website
     runs-on: ubuntu-latest
-    needs: build-my-resume
+    needs: 
+      - checkout-repo
+      - build-my-resume
 
     container:
       image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
