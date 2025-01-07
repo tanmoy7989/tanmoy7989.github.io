@@ -27,7 +27,7 @@ jobs:
       image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
       credentials:
         username: ${{ github.actor }}
-        password: ${{ secrets.ghcr_token }}
+        password: ${{ secrets.github_token }}
       volumes:
         - ./resume/content:/home/content
     steps:
