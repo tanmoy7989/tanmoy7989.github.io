@@ -79,7 +79,7 @@ jobs:
           cp artifacts/resume.html $(pwd)/assets/docs/resume.html
       
       - name: get config file
-        run: cp $(pwd)/resume/content/config.deploy.yml $(pwd)/_config.yml
+        run: cp $(pwd)/configs/config.deploy.yml $(pwd)/_config.yml
 
       - name: run docker container
         uses: addnab/docker-run-action@v3
