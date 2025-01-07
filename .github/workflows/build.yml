@@ -33,8 +33,8 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
-          options: -v ${{ github.workspace }}/resume/content:/home/content
+          options: -v $(pwd)/resume/content:/home/content
           run: npm run export && ls -l /home && ls -l /home/content
       
       - name: copy resume to assets
-        run: echo $(pwd) && ls -l $(pwd)
+        run: echo $(pwd) && ls -l $(pwd)/resume && $(pwd)/resume/content
