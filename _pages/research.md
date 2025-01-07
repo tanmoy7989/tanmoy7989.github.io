@@ -8,7 +8,7 @@ title: "Research"
 permalink: /research/
 ---
 
-## Non-canonical amino acid modifications to peptides for half-life protraction
+## Non-canonical amino acid modifications-1 to peptides for half-life protraction
 While fatty acid and related biopolymers have been conjugated with peptides and other biologics for half-life extension through albumin binding for almost a decade now, there are surprisingly no systematic methods or even best practices in designing the chemistry or the acylation location of such biopolymers on drug moleciules. 
 
 As a protein design scientist within Digital Sciences and Innovation (DSI) at Novo Nordisk Research Center Seattle, I developed a high throughput computational workflow for screening biopolymers and optimizing their attachment location on peptide scaffolds that minimize undesirable interactions with the peptide or the target receptor. The problem maps directly into the more well-known problem of modifying one or more locations on peptide scaffolds into rather special non-canonical amino acids that possess long chain fatty acid sidechain groups. Thus our approach is generally applicable to designing any non-canonical modifications to biologics beyond peptides.

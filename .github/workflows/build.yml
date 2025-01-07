@@ -75,8 +75,8 @@ jobs:
       
       - name: copy resume to website
         run: > 
-          cp artifacts/resume.pdf $(pwd)/assets/docs/resume/
-          cp artifacts/resume.html $(pwd)/assets/docs/resume/
+          mv artifacts/resume.pdf $(pwd)/assets/docs/resume/ && 
+          mv artifacts/resume.html $(pwd)/assets/docs/resume/
           
       - name: get config file
         run: cp $(pwd)/configs/config.deploy.yml $(pwd)/_config.yml
@@ -92,6 +92,11 @@ jobs:
             ls -l $(pwd)/assets/docs/resume/ &&
             bundle exec jekyll build --incremental
       
-      - name: verify build
-        run: ls -l $(pwd)/_site
-        
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: tanmoy7989
+          author_email: tanmoy.7989@gmail.com
+          message: 'auto-commit $RANDOM'
+          add: 'report.txt'
+          
