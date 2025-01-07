@@ -7,57 +7,36 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
+  actions: read|write
+  contents: read|write
+  pages: read|write
   id-token: write
 
 jobs:
-  build-tanmoys-website:
+  checkout:
+    name: checkout
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-
-    - name: Login to GitHub Container Registry
-      uses: docker/login-action@v3
-      with:
-        registry: ghcr.io
+      - uses: actions/checkout@v4
+  
+  resume:
+    runs-on: ubuntu-latest
+    needs: checkout
+    name: resume
+    container:
+      image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
+      credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Pull Docker images
-      run: |
-        docker pull ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
-        docker pull ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
-
-    - name: Copy deploy config
-      run: cp configs/config.deploy.yml ../_config.yml
-
-    - name: Build resume
-      run: |
-        mkdir -p assets/docs/resume
-        docker run --rm -it \
-          -u 1000:1000 \
-          -v $(pwd)/resume/content:/home/content \
-          ghcr.io/your-username/tsanyal-resume:latest \
-          sh -c "npm run export"
-        mv resume/content/resume.pdf assets/docs/resume
-        mv resume/content/resume.html assets/docs/resume
-
-    - name: Build website
-      run: |
-        docker run --rm -it \
-          -u 1000:1000 \
-          -v $(pwd):/home \
-          ghcr.io/your-username/tsanyal-website:latest \
-          sh -c "bundle exec jekyll build --incremental"
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+      volumes:
+        - ./resume/content:/home/content
+    steps:
+        - run: npm run export
+    
+  copy-resume:
+    needs: resume
+    name: copy-resume
+    runs-on: ubuntu-latest
+    steps:
+      - run: cp resume/content/resume.pdf assets/docs/resume/resume.pdf
+  
