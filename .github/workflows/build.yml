@@ -6,6 +6,12 @@ on:
   
   workflow_dispatch:
 
+permissions:
+  packages: read
+  contents: read
+  attestations: write
+  id-token: write
+
 jobs:
   checkout:
     name: checkout
@@ -17,11 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: checkout
     name: resume
-    permissions:
-      packages: write
-      contents: read
-      attestations: write
-      id-token: write
     container:
       image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
       credentials:
@@ -30,7 +31,7 @@ jobs:
       volumes:
         - ./resume/content:/home/content
     steps:
-    - run: npm run export
+    - run: sh -c 'npm run export'
     
   copy-resume:
     needs: resume
