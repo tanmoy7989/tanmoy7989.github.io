@@ -14,26 +14,15 @@ jobs:
     name: checkout
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
   
   resume:
     runs-on: ubuntu-latest
     needs: checkout
-    name: resume
-    container:
-      image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-      volumes:
-        - ./resume/content:/home/content
     steps:
-        - run: npm run export
-    
-  copy-resume:
-    needs: resume
-    name: copy-resume
-    runs-on: ubuntu-latest
-    steps:
-      - run: cp resume/content/resume.pdf assets/docs/resume/resume.pdf
-  
+      uses: addnab/docker-run-action@v3
+      with:
+          image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
+          options: -v ./resume/content:/home/content
+          run: npm run export
+      
