@@ -6,9 +6,6 @@ on:
   
   workflow_dispatch:
 
-permissions:
-  packages: read
-
 jobs:
   checkout:
     name: checkout
@@ -19,10 +16,27 @@ jobs:
   resume:
     runs-on: ubuntu-latest
     needs: checkout
+    name: resume
+    permissions:
+      packages: write
+      contents: read
+      attestations: write
+      id-token: write
+    container:
+      image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+      volumes:
+        - ./resume/content:/home/content
     steps:
-      - uses: addnab/docker-run-action@v3
-        with:
-          image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
-          options: -v ./resume/content:/home/content
-          run: npm run export
-      
+    - run: npm run export
+    
+  copy-resume:
+    needs: resume
+    name: copy-resume
+    runs-on: ubuntu-latest
+    steps:
+      - run: cp resume/content/resume.pdf assets/docs/resume/resume.pdf
+  
+  
