@@ -3,8 +3,8 @@
 *.sw[p_]
 
 # Ruby Gem
-*.gem
-.bundle
+**.gem
+**.bundle
 Gemfile.lock
 **/vendor/bundle
 
@@ -23,4 +23,7 @@ Gemfile.lock
 .jekyll-metadata
 .sass-cache
 _asset_bundler_cache
+
+# config file generated during local tests
+_config.yml
 
