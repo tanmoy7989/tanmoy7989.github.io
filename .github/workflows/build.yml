@@ -13,18 +13,9 @@ permissions:
   id-token: write
 
 jobs:
-  checkout-repo:
-    name: checkout repo
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: checkout repository
-        uses: actions/checkout@v2
-
   build-my-resume:
     name: build my resume
     runs-on: ubuntu-latest
-    needs: checkout-repo
 
     container:
       image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
@@ -35,6 +26,9 @@ jobs:
         - ${{ github.workspace }}/resume/content:/home/content
     
     steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+
       - name: run docker container
         uses: addnab/docker-run-action@v3
         with:
@@ -42,17 +36,23 @@ jobs:
           options: -v ${{ github.workspace }}/resume/content:/home/content
           run: npm run export
       
-      - name: copy resume to assets
-        run: >
-          cp $(pwd)/resume/content/resume.pdf $(pwd)/assets/docs/ && 
-          cp $(pwd)/resume/content/resume.html $(pwd)/assets/docs/
+      - name: save resume as artifact
+        run: > 
+          mkdir -p resume-artifact && 
+          cp $(pwd)/resume/content/resume.pdf resume-artifact/
+          cp $(pwd)/resume/content/resume.html resume-artifact/
+      
+      - name: upload resume artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: resume
+          path: resume-artifact
+
   
-  deploy-website:
-    name: deploy website
+  build-my-website:
+    name: build my website
     runs-on: ubuntu-latest
-    needs: 
-      - checkout-repo
-      - build-my-resume
+    needs: build-my-resume
 
     container:
       image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
@@ -63,6 +63,20 @@ jobs:
         - ${{ github.workspace }}:/home
     
     steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+
+      - name: download resume artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: resume
+          path: resume-artifact
+      
+      - name: copy resume to website
+        run: > 
+          cp $resume-artifact/resume.pdf $(pwd)/assets/docs/resume.pdf &&
+          cp $resume-artifact/resume.html $(pwd)/assets/docs/resume.html
+      
       - name: run docker container
         uses: addnab/docker-run-action@v3
         with:
