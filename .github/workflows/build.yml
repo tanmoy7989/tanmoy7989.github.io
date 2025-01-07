@@ -38,15 +38,16 @@ jobs:
       
       - name: save resume as artifact
         run: > 
-          mkdir -p path/to/artifacts && 
-          cp $(pwd)/resume/content/resume.pdf path/to/artifacts/
-          cp $(pwd)/resume/content/resume.html path/to/artifacts/
+          mkdir -p artifacts/ && 
+          ls -l artifacts/ && 
+          cp $(pwd)/resume/content/resume.pdf artifacts/ && 
+          cp $(pwd)/resume/content/resume.html artifacts/
       
       - name: upload resume artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume
-          path: path/to/artifacts
+          path: artifacts/
           retention-days: 1 
 
   
@@ -71,12 +72,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: resume
-          path: path/to/artifacts
+          path: artifacts/
       
       - name: copy resume to website
         run: > 
-          cp path/to/artifacts/resume.pdf $(pwd)/assets/docs/resume.pdf &&
-          cp path/to/artifacts/resume.html $(pwd)/assets/docs/resume.html
+          cp artifacts/resume.pdf $(pwd)/assets/docs/resume.pdf &&
+          cp artifacts/resume.html $(pwd)/assets/docs/resume.html
       
       - name: run docker container
         uses: addnab/docker-run-action@v3
