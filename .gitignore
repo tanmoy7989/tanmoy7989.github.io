@@ -24,6 +24,5 @@ Gemfile.lock
 .sass-cache
 _asset_bundler_cache
 
-# config file generated during local tests
-_config.yml
+
 

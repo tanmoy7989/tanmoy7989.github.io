@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://0.0.0.0:4000/</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/research/</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/sample_post/</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/assets/docs/resume/resume.html</loc>
+<lastmod>2025-01-07T13:46:20-08:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/assets/docs/resume/resume.pdf</loc>
+<lastmod>2025-01-07T13:46:22-08:00</lastmod>
+</url>
+</urlset>

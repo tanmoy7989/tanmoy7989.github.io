@@ -75,9 +75,9 @@ jobs:
       
       - name: copy resume to website
         run: > 
-          cp artifacts/resume.pdf $(pwd)/assets/docs/resume.pdf &&
-          cp artifacts/resume.html $(pwd)/assets/docs/resume.html
-      
+          cp artifacts/resume.pdf $(pwd)/assets/docs/resume/
+          cp artifacts/resume.html $(pwd)/assets/docs/resume/
+          
       - name: get config file
         run: cp $(pwd)/configs/config.deploy.yml $(pwd)/_config.yml
 
@@ -94,12 +94,4 @@ jobs:
       
       - name: verify build
         run: ls -l $(pwd)/_site
-
-      # - name: deploy website
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     personal_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./_site
-      #     publish_branch: main
-      #     cname: tanmoy7989.github.io
-      #     commit_message: "Deploy Tanmoy's Website"
+        

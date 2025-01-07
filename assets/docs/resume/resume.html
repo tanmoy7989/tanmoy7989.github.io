@@ -1,0 +1,1034 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>Tanmoy Sanyal</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    /* Utils */
+/*----- Colors -----*/
+/*----- Fonts -----*/
+/*----- Dimensions and sizes -----*/
+/* Base */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v32/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_GbQbMZhKg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v32/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_N_XbMZhKg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background: #f8f8f8;
+  margin: 50px 0 100px;
+  letter-spacing: 0.3px;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+h3.bold {
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+}
+h4.bold {
+  font-weight: 700;
+}
+
+h5 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+}
+h5.italic {
+  font-style: italic;
+}
+
+h6 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #2895F1;
+}
+a .fa-external-link {
+  font-size: 10px;
+  vertical-align: text-top;
+}
+
+p,
+li {
+  font-size: 11px;
+}
+
+blockquote {
+  font-size: 11px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 10px 25px;
+}
+
+em {
+  color: #999;
+}
+
+ul {
+  margin: 10px 0 0;
+  -webkit-padding-start: 25px;
+}
+ul li {
+  padding-left: 10px;
+  margin-top: 4px;
+}
+ul.first-child {
+  margin-top: 0;
+}
+ul.minimal {
+  list-style: none;
+  padding: 0;
+}
+ul.minimal li {
+  margin-bottom: 3px;
+  padding-left: 0;
+}
+ul.two-column {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 28px;
+  column-count: 2;
+  column-gap: 28px;
+}
+ul.two-column li {
+  padding-left: 0;
+}
+
+@page {
+  size: A4;
+}
+.container {
+  padding-top: 20px;
+}
+
+.keyline {
+  width: 45px;
+  margin: 8px 0 10px;
+  border-top: 1px solid #154c79;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.profile-pic {
+  margin-top: -5px;
+  margin-right: 18px;
+}
+.profile-pic img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: 2px solid #154c79;
+}
+
+.summary {
+  margin: 5px 0 5px;
+}
+
+/* Layouts */
+body {
+  background: white;
+  margin: 0;
+}
+
+.page {
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 36px 0 30px;
+  box-shadow: none;
+}
+.page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left-column {
+  float: left;
+  width: 160px;
+  margin-right: 20px;
+  word-wrap: break-word;
+}
+
+.right-column {
+  width: auto;
+  overflow: hidden;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.fa-external-link {
+  display: none;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 10px;
+}
+
+.work-container .item {
+  page-break-inside: avoid;
+}
+
+.volunteer-container {
+  page-break-inside: avoid;
+}
+
+.publications-container {
+  page-break-inside: avoid;
+}
+
+.interests-container {
+  page-break-inside: avoid;
+}
+
+.publisher-name {
+  font-style: italic;
+}
+
+.presentation-name {
+  font-style: italic;
+}
+
+.work-highlight-title {
+  font-weight: 700;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+  .page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 36px 0 30px;
+    box-shadow: none;
+  }
+  .page .resume-header,
+  .page .resume-content {
+    padding: 0 22px 0 34px;
+  }
+  .container {
+    page-break-inside: avoid;
+  }
+  .work-container .item {
+    page-break-inside: avoid;
+  }
+  .fa-external-link {
+    display: none;
+  }
+}
+/* Components */
+.info-tag-container {
+  margin-bottom: 5px;
+}
+.info-tag-container .fa {
+  font-size: 14px;
+  width: 12px;
+  margin-right: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+.info-tag-container .fa.fa-map-marker {
+  font-size: 16px;
+}
+.info-tag-container .fa.fa-mobile {
+  font-size: 18px;
+}
+.info-tag-container .fa.fa-envelope-o {
+  font-size: 12px;
+}
+.info-tag-container .fa.fa-desktop {
+  font-size: 11px;
+}
+.info-tag-container .fa.fa-external-link {
+  width: auto;
+  font-size: inherit;
+  vertical-align: text-top;
+}
+.info-tag-container .info-text {
+  font-size: 9px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 139px;
+}
+
+.references-container .fa {
+  font-size: 14px;
+}
+
+.education-container .location {
+  padding-bottom: 6px;
+  font-weight: 400;
+}
+.education-container .specialization {
+  text-transform: none;
+  font-style: italic;
+}
+  </style>
+</head>
+
+<body>
+  <main id="resume" class="page">
+    <header class="resume-header clearfix">
+      <div class="profile-header pull-left">
+        <h1>Tanmoy Sanyal</h1>
+        <h2>Scientist, Protein Design || Structural biology</h2>
+      </div>
+      <div class="profile-pic pull-right">
+      </div>
+    </header>
+    <div class="resume-content">
+      <aside class="left-column">
+        <div class="container about-container">
+          <div class="title">
+            <h3>About</h3>
+            <div class="keyline"></div>
+          </div>
+        
+            <div class="info-tag-container">
+              <i class="fa fa-map-marker"></i>
+            
+              <h6 class="info-text">San Francisco Bay Area, CA</h6>
+            </div>
+        
+            <div class="info-tag-container">
+              <i class="fa fa-envelope-o"></i>
+            
+              <h6 class="info-text">tanmoy.7989@gmail.com</h6>
+            </div>
+        
+            <div class="info-tag-container">
+              <i class="fa fa-mobile"></i>
+            
+              <h6 class="info-text">(805) 637-0375</h6>
+            </div>
+        
+            <div class="info-tag-container">
+              <i class="fa fa-desktop"></i>
+            
+              <h6 class="info-text">
+                <a href="https://tanmoy7989.github.io" target="_blank">
+                  tanmoy7989.github.io <i class="fa fa-external-link" aria-hidden="true"></i>
+                </a>
+              </h6>
+            </div>
+        
+                      <div class="info-tag-container">
+                        <i class="fa fa-twitter"></i>
+                      
+                        <h6 class="info-text">
+                          <a href="https://twitter.com/hiddenvariable2" target="_blank">
+                            twitter.com/hiddenvariable2 <i class="fa fa-external-link" aria-hidden="true"></i>
+                          </a>
+                        </h6>
+                      </div>
+                      <div class="info-tag-container">
+                        <i class="fa fa-github"></i>
+                      
+                        <h6 class="info-text">
+                          <a href="https://github.com/tanmoy7989" target="_blank">
+                            tanmoy7989 <i class="fa fa-external-link" aria-hidden="true"></i>
+                          </a>
+                        </h6>
+                      </div>
+        </section>
+        <div class="skills-container">
+          <section class="container">
+              <div class="title">
+                <h3>Protein Design</h3>
+                <div class="keyline"></div>
+              </div>
+              <ul class="minimal">
+                <li>
+                  <h6>Rosetta</h6>
+                </li>
+                <li>
+                  <h6>AlphaFold</h6>
+                </li>
+                <li>
+                  <h6>RFDiffusion</h6>
+                </li>
+                <li>
+                  <h6>ProteinMPNN</h6>
+                </li>
+              </ul> 
+          </section>
+          <section class="container">
+              <div class="title">
+                <h3>Molecular modeling</h3>
+                <div class="keyline"></div>
+              </div>
+              <ul class="minimal">
+                <li>
+                  <h6>openMM</h6>
+                </li>
+                <li>
+                  <h6>LAMMPS</h6>
+                </li>
+                <li>
+                  <h6>GROMACS</h6>
+                </li>
+                <li>
+                  <h6>IMP</h6>
+                </li>
+                <li>
+                  <h6>Modeller</h6>
+                </li>
+                <li>
+                  <h6>UCSF ChimeraX</h6>
+                </li>
+                <li>
+                  <h6>PyMOL</h6>
+                </li>
+              </ul> 
+          </section>
+          <section class="container">
+              <div class="title">
+                <h3>ML frameworks</h3>
+                <div class="keyline"></div>
+              </div>
+              <ul class="minimal">
+                <li>
+                  <h6>PyTorch</h6>
+                </li>
+                <li>
+                  <h6>Tensorflow-probability</h6>
+                </li>
+                <li>
+                  <h6>PyMC3</h6>
+                </li>
+              </ul> 
+          </section>
+          <section class="container">
+              <div class="title">
+                <h3>Languages</h3>
+                <div class="keyline"></div>
+              </div>
+              <ul class="minimal">
+                <li>
+                  <h6>Python (+Cython) (~20000+ lines)</h6>
+                </li>
+                <li>
+                  <h6>Fortran-90 (~1000+ lines)</h6>
+                </li>
+                <li>
+                  <h6>C++ (~4000+ lines)</h6>
+                </li>
+                <li>
+                  <h6>Bash</h6>
+                </li>
+                <li>
+                  <h6>TCL</h6>
+                </li>
+              </ul> 
+          </section>
+        </div>
+        <div class="container open-source-container">
+          <div class="title">
+            <h3>Open Source</h3>
+            <div class="keyline"></div>
+          </div>
+        
+            <section class="item">
+              <h5 class="bold">
+                  <a href="https://github.com/integrativemodeling/nbspike" target="_blank">
+                  nbspike <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+              </h5>
+              
+              <h6>Integrative epitope prediction</h6>
+        
+            </section>
+            <section class="item">
+              <h5 class="bold">
+                  <a href="https://github.com/salilab/raindrops" target="_blank">
+                  IMP <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+              </h5>
+              
+              <h6>Crosslink guided domain discovery</h6>
+        
+            </section>
+            <section class="item">
+              <h5 class="bold">
+                  <a href="https://pdb-dev.wwpdb.org/entry.html?PDBDEV_00000081" target="_blank">
+                  PDB-Dev deposition <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+              </h5>
+              
+              <h6>Structure of SMC5/6</h6>
+        
+            </section>
+            <section class="item">
+              <h5 class="bold">
+                  <a href="https://docs.lammps.org/pair_local_density.html" target="_blank">
+                  LAMMPS <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+              </h5>
+              
+              <h6>Local density potential</h6>
+        
+            </section>
+        </div>
+        <div class="container interests-container">
+          <div class="title">
+            <h3>Research Interests</h3>
+            <div class="keyline"></div>
+          </div>
+        
+            <section class="item">
+              <ul class="minimal">
+                <li>Protein language models</li>
+              </ul>
+            </section>
+            <section class="item">
+              <ul class="minimal">
+                <li>Integrative structure modeling</li>
+              </ul>
+            </section>
+            <section class="item">
+              <ul class="minimal">
+                <li>Non-canonical amino acids</li>
+              </ul>
+            </section>
+            <section class="item">
+              <ul class="minimal">
+                <li>Nanobodies</li>
+              </ul>
+            </section>
+            <section class="item">
+              <ul class="minimal">
+                <li>Forcefield development</li>
+              </ul>
+            </section>
+        </div>
+      </aside>
+      <div class="right-column">
+        <div class="container education-container">
+          <div class="title">
+          <h3>Education</h3>
+          <div class="keyline"></div>
+        </div>
+         
+          <section class="item">
+            <div class="section-header clearfix">
+              <h4 class="bold pull-left">
+                  University of California Santa Barbara
+              </h4>
+              <h5 class="italic pull-right">
+                  <span class="startDate">2013</span>
+                  <span class="endDate"> - 2018</span>
+              </h5>
+            </div>
+              <h5 class="location">Santa Babara, CA, USA</h5>
+        
+            <h4>Ph.D Chemical Engineering</h4>
+        
+              <h5 class="specialization">Graduate emphasis in Computational Science &amp; Engineering (Parallel Computing &amp; Numerical methods for ODEs / PDEs)</h5>
+          </section>
+        
+          <section class="item">
+            <div class="section-header clearfix">
+              <h4 class="bold pull-left">
+                  Indian Institute of Technology Kharagpur
+              </h4>
+              <h5 class="italic pull-right">
+                  <span class="startDate">2008</span>
+                  <span class="endDate"> - 2013</span>
+              </h5>
+            </div>
+              <h5 class="location">Kharagpur, WB, India</h5>
+        
+            <h4>Masters and Bachelors of Technology (Hons.) integrated dual degree Chemical Engineering</h4>
+        
+          </section>
+        </div>
+        <div class="container work-container">
+          <div class="title">
+            <h3>Research Experience</h3>
+            <div class="keyline"></div>
+          </div>
+        
+          <section class="item">
+            <div class="section-header clearfix">
+              <h4 class="bold pull-left">
+                  Amgen
+              </h4>
+              <h5 class="italic pull-right">
+                  <span class="startDate">2023</span>
+                  <span class="endDate"> - Present</span>
+              </h5>
+            </div>
+        
+              <h4>Principal protein design scientist</h4>
+        
+        
+          </section>
+          <section class="item">
+            <div class="section-header clearfix">
+              <h4 class="bold pull-left">
+                  Novo Nordisk Research Center Seattle
+              </h4>
+              <h5 class="italic pull-right">
+                  <span class="startDate">2022</span>
+                  <span class="endDate"> - 2023</span>
+              </h5>
+            </div>
+        
+              <h4>Protein design scientist</h4>
+        
+        
+              <ul>
+                  <li>
+                    <h4>
+                      <span class="work-highlight-title">Biologics design</span>:
+                      <span>(i) Design of mini-proteins and antibodies for multiple therapy areas using Rosetta and AlphaFold / RFDiffusion / ProteinMPNN pipelines (ii) SAR analysis based on protein language models. (iii) Optimizing non-canonical modifications to peptides for half-life protraction.</span>
+                    </h4>
+                  </li>
+                  <li>
+                    <h4>
+                      <span class="work-highlight-title">Scientific software development</span>:
+                      <span>Worked closely with AWS to re-tool AlphaFold and deploy a faster cloud-native in-house version for robust and scalable (~100k sequences) structure prediction; reguarly applied now in variant design within the company.</span>
+                    </h4>
+                  </li>
+              </ul>
+          </section>
+          <section class="item">
+            <div class="section-header clearfix">
+              <h4 class="bold pull-left">
+                  <a href="https://salilab.org" target="_blank">
+                    Department of Bioengineering, University of California San Francisco <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+              </h4>
+              <h5 class="italic pull-right">
+                  <span class="startDate">2019</span>
+                  <span class="endDate"> - 2022</span>
+              </h5>
+            </div>
+        
+              <h4>Postdoctoral scholar, Andrej Sali lab</h4>
+        
+        
+              <ul>
+                  <li>
+                    <h4>
+                      <span class="work-highlight-title">Protein structure modeling using chemical crosslinks</span>:
+                      <span>Homology models + chemical-crosslinks + cryo-EM data for protein complex structure modeling; graph sampling methods to extract domain information from crosslinks. Applications include SMC and DNA helicase protein families.</span>
+                    </h4>
+                  </li>
+                  <li>
+                    <h4>
+                      <span class="work-highlight-title">Nanobody biophsyics</span>:
+                      <span>Developed integrative docking scores for nanobody docking on target receptors (SARS-CoV-2 and variant spike proteins) using chemical crosslinking and escape mutation data. Developed design principles for increasing nanobody thermostability.</span>
+                    </h4>
+                  </li>
+                  <li>
+                    <h4>
+                      <span class="work-highlight-title">Whole cell models</span>:
+                      <span>Developed Bayesian Network models to combine continuum scale (pharmacokinetic), particle scale (Brownian dynamics) and network scale (enzyme pathways) models of the pancreatic beta-cell into build a proof-of-concept multimodal digitial twin. Served as software lead within the Pancreatic Beta-Cell consortium (collaborating across UCSF, USC, ShanghaiTech and HUJI)</span>
+                    </h4>
+                  </li>
+              </ul>
+          </section>
+          <section class="item">
+            <div class="section-header clearfix">
+              <h4 class="bold pull-left">
+                  <a href="https://theshelllab.org" target="_blank">
+                    Chemical Engineering, University of California Santa Barbara <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+              </h4>
+              <h5 class="italic pull-right">
+                  <span class="startDate">2013</span>
+                  <span class="endDate"> - 2018</span>
+              </h5>
+            </div>
+        
+              <h4>PhD candidate, Shell lab</h4>
+        
+        
+              <ul>
+                  <li>
+                    <h4>
+                      <span class="work-highlight-title">Coarse-graining algorithms for bulk liquids</span>:
+                      <span>Introduced the local density potential for structurally and thermodynamically accurate coarse-grained MD simulations of liquid-liquid phase separation, which are relatively rare in the chemical engineering literature</span>
+                    </h4>
+                  </li>
+                  <li>
+                    <h4>
+                      <span class="work-highlight-title">Coarse-graining algorithms for protein folding using variational inference techniques</span>:
+                      <span>Developed protein backbone models for (i) template-free folding of 200+ residue coarse-grained protein domains using MD simulations, and (ii) studying self-assembly in amyloidogenic peptides</span>
+                    </h4>
+                  </li>
+                  <li>
+                    <h4>
+                      <span class="work-highlight-title">High Performance Computing</span>:
+                      <span>As system administrator, set up 144 core Linux (Rocks 6.2) cluster and wrote utilities for automating (i) network-attached-storage management, and (ii) conflict-free compute resource sharing between lab members.</span>
+                    </h4>
+                  </li>
+              </ul>
+          </section>
+        </div>
+        <div class="container volunteer-container">
+          <div class="title">
+            <h3>Volunteer</h3>
+            <div class="keyline"></div>
+          </div>
+        
+          <section class="item">
+            <div class="section-header clearfix">
+              <h4 class="bold pull-left">
+                  Peer-review
+              </h4>
+              <h5 class="italic pull-right">
+                  <span class="startDate">2019</span>
+                  <span class="endDate"> - Present</span>
+              </h5>
+            </div>
+        
+              <p class="summary">Structure, Journal of Physical Chemistry, Proteins: Structure,Function and Bioinformatics, Review of Scientific Instruments, Rapid Reviews Covid-19, Life</p>
+        
+          </section>
+          <section class="item">
+            <div class="section-header clearfix">
+              <h4 class="bold pull-left">
+                  Graduate Simulation Seminar Series, University of California Santa Barbara
+              </h4>
+              <h5 class="italic pull-right">
+                  <span class="startDate">2014</span>
+                  <span class="endDate"> - 2016</span>
+              </h5>
+            </div>
+              <h5>Co-founder</h5>
+        
+              <p class="summary">Conception, organization, public outreach and long-term funding support from ChE, Materials Science and Computer Science departments.</p>
+        
+          </section>
+        </div>
+        <div class="container publications-container">
+          <div class="title">
+            <h3>Selected Publications</h3>
+            <div class="keyline"></div>
+          </div>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">Highly synergistic combinations of nanobodies that target SARS-CoV-2 and are resistant to escape</h4>
+                <h5>
+                  <span>F.D. Mast, P.C. Fridy, N.E. Karen, J. Wang, E.Y. Jacobs, J.P. Olivier, T. Sanyal, et al</span>,
+                  <span class="publisher-name">eLife</span>,
+                  <span>2021</span>
+                </h5>
+              </ul>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">Bayesian metamodeling of complex biological systems across varying representations</h4>
+                <h5>
+                  <span>B. Raveh, L. Sun, K.L. White, T. Sanyal, et al</span>,
+                  <span class="publisher-name">PNAS</span>,
+                  <span>2021</span>
+                </h5>
+              </ul>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">Integrative analysis reveals unique structural and functional features of the Smc5/6 complex</h4>
+                <h5>
+                  <span>F.D. Mast, P.C. Fridy, N.E. Karen, J. Wang, E.Y. Jacobs, J.P. Olivier, T. Sanyal, et al</span>,
+                  <span class="publisher-name">PNAS</span>,
+                  <span>2021</span>
+                </h5>
+              </ul>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">A hybrid, bottom up, structurally-accurate, Go-like coarse-grained protein model</h4>
+                <h5>
+                  <span>T. Sanyal, J. Mittal &amp; M. Scott Shell</span>,
+                  <span class="publisher-name">JCP</span>,
+                  <span>2019</span>
+                </h5>
+              </ul>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">Transferable coarse-grained models of liquid-liquid equilibrium using local density potentials optimized with the relative entropy</h4>
+                <h5>
+                  <span>T. Sanyal &amp; M. Scott Shell</span>,
+                  <span class="publisher-name">JPC-B</span>,
+                  <span>2018</span>
+                </h5>
+              </ul>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">Coarse-grained models using local-density potentials optimized with the relative entropy: Application to implicit solvation</h4>
+                <h5>
+                  <span>T. Sanyal &amp; M. Scott Shell</span>,
+                  <span class="publisher-name">JCP</span>,
+                  <span>2016</span>
+                </h5>
+              </ul>
+        </div>
+        <div class="container conferences-container">
+          <div class="title">
+            <h3>Recent conference presentations</h3>
+            <div class="keyline"></div>
+          </div>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">
+                  <span>7th Annual Computational Drug Development for Biologics Summit</span>,
+                  <span>Boston, MA, USA</span>
+                </h4>
+        
+                <h5>
+                  (<span>Talk</span>): 
+                  <span class="presentation-name">Unpacking a workflow for automating protractor placement on peptides for enhanced half life</span>,
+                  <span>Oct-2022</span>
+                </h5>
+              </ul>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">
+                  <span>Indian Biophysical Society Meeting</span>,
+                  <span>Navi Mumbai, India</span>
+                </h4>
+        
+                <h5>
+                  (<span>Talk</span>): 
+                  <span class="presentation-name">Integrative modeling of higher order complexes from binary binding modes</span>,
+                  <span>Apr-2022</span>
+                </h5>
+              </ul>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">
+                  <span>Biophysical Society Annual Meeting</span>,
+                  <span>San Francisco, CA, USA</span>
+                </h4>
+        
+                <h5>
+                  (<span>Talk</span>): 
+                  <span class="presentation-name">Rigid body assignment in integrative determination of protein complex structures</span>,
+                  <span>Feb-2022</span>
+                </h5>
+              </ul>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">
+                  <span>PDB50: A special symposium celebrating the 50th anniversary of the Protein Data Bank</span>,
+                  <span>(virtiual)</span>
+                </h4>
+        
+                <h5>
+                  (<span>Poster</span>): 
+                  <span class="presentation-name">Integrative modeling of the SMC5/6 complex</span>,
+                  <span>May-2021</span>
+                </h5>
+              </ul>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">
+                  <span>USC Brige Institute - Pancreatic Beta Cell Consortium Retreat</span>,
+                  <span>Catalina Island, CA, USA</span>
+                </h4>
+        
+                <h5>
+                  (<span>Workshop</span>): 
+                  <span class="presentation-name">Meta-modeling: Probabilistic graphical models and your data</span>,
+                  <span>Nov-2019</span>
+                </h5>
+              </ul>
+              <ul class="minimal">
+                <section class="item">
+                <h4 class="clearfix">
+                  <span>Berkeley Mini Stat Mech Meeting</span>,
+                  <span>Berkeley, CA, USA</span>
+                </h4>
+        
+                <h5>
+                  (<span>Poster</span>): 
+                  <span class="presentation-name">Coarse-grained models for protein folding and self-assembly with the relative entropy</span>,
+                  <span>Jan-2019</span>
+                </h5>
+              </ul>
+        </div>
+        <div class="container awards-container">
+          <div class="title">
+            <h3>Awards</h3>
+            <div class="keyline"></div>
+          </div>
+        
+            <section class="item">
+              <div class="section-header clearfix">
+                <h4 class="bold pull-left">
+                    IUPAB best oral presentation
+                </h4>
+                <h5 class="italic pull-right">
+                    2022
+                    </h5>
+              </div>
+        
+                <h5 class="awarder">44th Indian Biophysical Society Meeting</h5>
+        
+            </section>
+            <section class="item">
+              <div class="section-header clearfix">
+                <h4 class="bold pull-left">
+                    Technopreneurship Promotion Programme
+                </h4>
+                <h5 class="italic pull-right">
+                    2009
+                    </h5>
+              </div>
+        
+                <h5 class="awarder">Ministry of Science and Technology, Govt. of India</h5>
+        
+                <p class="summary">Seed money for prototype scale-up of bioreactors for algal biodiesel generation</p>
+            </section>
+            <section class="item">
+              <div class="section-header clearfix">
+                <h4 class="bold pull-left">
+                    Jagdis Bose National Science Talent Search (JBNSTS) fellowship
+                </h4>
+                <h5 class="italic pull-right">
+                    2009
+                    </h5>
+              </div>
+        
+        
+            </section>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

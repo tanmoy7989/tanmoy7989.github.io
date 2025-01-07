@@ -15,7 +15,7 @@ cd ..
 RESUME_SRC_PATH=resume/content
 RESUME_TAR_PATH=assets/docs/resume
 
-# copy config file
+# copy local config file
 cp configs/config.local.yml ./_config.yml
 
 # build resume
@@ -40,5 +40,5 @@ docker run --rm -it \
         jekyll serve --watch --host 0.0.0.0"
 
 # cleanup
-rm _config.yml
-rm -rf _site
+rm _config.yml && cp configs/config.deploy.yml ./_config.yml
+
