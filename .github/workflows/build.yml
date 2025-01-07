@@ -38,8 +38,7 @@ jobs:
       
       - name: save resume as artifact
         run: > 
-          mkdir -p artifacts/ && 
-          ls -l artifacts/ && 
+          mkdir -p artifacts/ &&
           cp $(pwd)/resume/content/resume.pdf artifacts/ && 
           cp $(pwd)/resume/content/resume.html artifacts/
       
@@ -84,7 +83,11 @@ jobs:
         with:
           image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
           options: -v ${{ github.workspace }}:/home
-          run: ls -l && bundle exec jekyll build --incremental
+          run: >
+            ls -l &&
+            ls -l $(pwd)/resume/content &&
+            ls -l $(pwd)/assets/docs/resume &&
+            bundle exec jekyll build --incremental
       
       - name: verify build
         run: ls -l $(pwd)/_site
