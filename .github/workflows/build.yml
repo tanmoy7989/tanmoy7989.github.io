@@ -31,7 +31,7 @@ jobs:
       volumes:
         - ./resume/content:/home/content
     steps:
-    - run: sh -c 'npm run export'
+    - run: ls -l /home
     
   copy-resume:
     needs: resume
