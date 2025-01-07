@@ -37,8 +37,9 @@ jobs:
           run: npm run export
       
       - name: copy resume to assets
-        run: cp $(pwd)/resume/content/resume.pdf $(pwd)/assets/docs/ && \
-             cp $(pwd)/resume/content/resume.html $(pwd)/assets/docs/
+        run: >
+          cp $(pwd)/resume/content/resume.pdf $(pwd)/assets/docs/ && 
+          cp $(pwd)/resume/content/resume.html $(pwd)/assets/docs/
   
   deploy-website:
     name: deploy website
