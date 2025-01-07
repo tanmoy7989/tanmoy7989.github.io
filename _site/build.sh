@@ -80,7 +80,7 @@ while getopts ':ld:h' opt; do
             -p 4000:4000 \
             -v $(pwd):$DOCKER_MNT_PATH \
             $DOCKER_SITE_IMG \
-            sh -c "bundle exec jekyll serve --watch -H 0.0.0.0"
+            sh -c "bundle exec jekyll serve --watch --host 0.0.0.0"
         ;;
     d)
         echo "Deploying site to github"
