@@ -37,7 +37,8 @@ jobs:
           run: npm run export
       
       - name: copy resume to assets
-        run: cp $(pwd)/resume/content/resume.pdf $(pwd)/assets/docs/
+        run: cp $(pwd)/resume/content/resume.pdf $(pwd)/assets/docs/ && \
+             cp $(pwd)/resume/content/resume.html $(pwd)/assets/docs/
   
   deploy-website:
     name: deploy website
@@ -58,7 +59,7 @@ jobs:
         with:
           image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
           options: -v ${{ github.workspace }}:/home
-          run: bundle exec jekyll build --incremental
+          run: ls -l && bundle exec jekyll build --incremental
       
       - name: verify build
         run: ls -l $(pwd)/_site
