@@ -17,15 +17,20 @@ jobs:
     name: build my resume
     runs-on: ubuntu-latest
 
-    container:
-      image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+    # container:
+    #   image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
+    #   credentials:
+    #     username: ${{ github.actor }}
+    #     password: ${{ secrets.GITHUB_TOKEN }}
     
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
+
+      - name: pull docker container
+        run: \
+          docker loging ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }} && 
+          docker pull ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
 
       - name: run docker container
         uses: addnab/docker-run-action@v3
