@@ -78,15 +78,18 @@ jobs:
           cp artifacts/resume.pdf $(pwd)/assets/docs/resume.pdf &&
           cp artifacts/resume.html $(pwd)/assets/docs/resume.html
       
+      - name: get config file
+        run: cp $(pwd)/resume/content/config.deploy.yml $(pwd)/_config.yml
+
       - name: run docker container
         uses: addnab/docker-run-action@v3
         with:
           image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
           options: -v ${{ github.workspace }}:/home
           run: >
-            ls -l &&
+            ls -l $(pwd) &&
             ls -l $(pwd)/resume/content &&
-            ls -l $(pwd)/assets/docs/resume &&
+            ls -l $(pwd)/assets/docs/resume/ &&
             bundle exec jekyll build --incremental
       
       - name: verify build
