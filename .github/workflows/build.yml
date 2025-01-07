@@ -27,7 +27,7 @@ jobs:
     
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: run docker container
         uses: addnab/docker-run-action@v3
@@ -43,7 +43,7 @@ jobs:
           cp $(pwd)/resume/content/resume.html resume-artifact/
       
       - name: upload resume artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: resume
           path: resume-artifact
@@ -64,10 +64,10 @@ jobs:
     
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: download resume artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: resume
           path: resume-artifact
