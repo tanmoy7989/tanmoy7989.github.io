@@ -37,4 +37,4 @@ jobs:
           run: npm run export && ls -l /home && ls -l /home/content
       
       - name: copy resume to assets
-        run: echo $(pwd) && ls -l $(pwd)/resume && ls -l $(pwd)/resume/content
+        run: ls -l $(pwd)/resume/content && cp $(pwd)/resume/content/resume.pdf $(pwd)/assets/docs/
