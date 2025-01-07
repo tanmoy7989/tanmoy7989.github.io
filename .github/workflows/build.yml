@@ -37,5 +37,5 @@ jobs:
           run: npm run export && ls -l /home && ls -l /home/content
       
       - name: copy resume to assets
-        run: ls - l ${{ github.workspace }}/resume/content
+        run: ls - l ${{ github.workspace }}
   
