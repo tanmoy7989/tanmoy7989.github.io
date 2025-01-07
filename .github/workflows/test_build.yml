@@ -92,11 +92,10 @@ jobs:
             ls -l $(pwd)/assets/docs/resume/ &&
             bundle exec jekyll build --incremental
       
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: tanmoy7989
-          author_email: tanmoy.7989@gmail.com
-          message: 'auto-commit $RANDOM'
-          add: 'report.txt'
-          
+      - name: verify website
+        run: >
+          ls -l $(pwd) &&
+          ls -l $(pwd)/_site &&
+          ls -l $(pwd)/assets/docs/resume/ &&
+          ls -l $(pwd)/assets/docs/resume/resume.pdf &&
+          ls -l $(pwd)/assets/docs/resume/resume.html

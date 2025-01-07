@@ -1,15 +1,13 @@
 #!/bin/bash
 
 # docker container images
+# make sure you have logged in to the docker registry with proper credentials
 DOCKER_SITE_IMG=ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
 DOCKER_RESUME_IMG=ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
 
 # pull docker images (assumes that the images are already built)
 docker pull $DOCKER_SITE_IMG
 docker pull $DOCKER_RESUME_IMG
-
-# change to the root directory
-cd ..
 
 # paths
 RESUME_SRC_PATH=resume/content
@@ -40,5 +38,5 @@ docker run --rm -it \
         jekyll serve --watch --host 0.0.0.0"
 
 # cleanup
+rm -rf _site
 rm _config.yml && cp configs/config.deploy.yml ./_config.yml
-
