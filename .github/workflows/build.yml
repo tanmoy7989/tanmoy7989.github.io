@@ -34,7 +34,40 @@ jobs:
         with:
           image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
           options: -v ${{ github.workspace }}/resume/content:/home/content
-          run: npm run export && ls -l /home && ls -l /home/content
+          run: npm run export
       
       - name: copy resume to assets
-        run: ls -l $(pwd)/resume/content && cp $(pwd)/resume/content/resume.pdf $(pwd)/assets/docs/
+        run: cp $(pwd)/resume/content/resume.pdf $(pwd)/assets/docs/
+  
+  deploy-website:
+    name: deploy website
+    runs-on: ubuntu-latest
+    needs: build-my-resume
+
+    container:
+      image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+      volumes:
+        - ${{ github.workspace }}:/home
+    
+    steps:
+      - name: run docker container
+        uses: addnab/docker-run-action@v3
+        with:
+          image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
+          options: -v ${{ github.workspace }}:/home
+          run: bundle exec jekyll build --incremental
+      
+      - name: verify build
+        run: ls -l $(pwd)/_site
+
+      # - name: deploy website
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     personal_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./_site
+      #     publish_branch: main
+      #     cname: tanmoy7989.github.io
+      #     commit_message: "Deploy Tanmoy's Website"
