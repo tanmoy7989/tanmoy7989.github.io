@@ -10,9 +10,7 @@ Gemfile.lock
 
 # Node.js and NPM
 **/node_modules
-# **yarn.lock
-# **package.json
-# **package-lock.json
+**package-lock.json
 **public
 **npm-debug.log*
 **codekit-config.json
@@ -25,4 +23,4 @@ Gemfile.lock
 .jekyll-metadata
 .sass-cache
 _asset_bundler_cache
-_site
+
