@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  build-tanmoys-website:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,8 +31,8 @@ jobs:
 
     - name: Pull Docker images
       run: |
-        docker pull ghcr.io/your-username/tsanyal-website:latest
-        docker pull ghcr.io/your-username/tsanyal-resume:latest
+        docker pull ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
+        docker pull ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
 
     - name: Copy deploy config
       run: cp configs/config.deploy.yml ../_config.yml
