@@ -6,8 +6,13 @@ DOCKER_SITE_IMG=ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
 DOCKER_RESUME_IMG=ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
 
 # pull docker images (assumes that the images are already built)
-docker pull $DOCKER_SITE_IMG
-docker pull $DOCKER_RESUME_IMG
+if [ -z "$(docker images -q $DOCKER_SITE_IMG 2> /dev/null)" ]; then
+    docker pull $DOCKER_SITE_IMG
+fi
+
+if [ -z "$(docker images -q $DOCKER_RESUME_IMG 2> /dev/null)" ]; then
+    docker pull $DOCKER_RESUME_IMG
+fi
 
 # paths
 RESUME_SRC_PATH=resume/content
