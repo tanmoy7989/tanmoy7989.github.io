@@ -1,0 +1,16 @@
+{{#if resume.work_history.length}}
+<div class="container work_history-container">
+  {{> title value="Employment History"}} 
+  {{#each resume.work_history}}
+  
+  <section class="item">
+    {{> section-header name=this.position }}
+    <h5>{{company}}, {{location}}</h5>
+    {{#if specialization}}
+      <h5 class="specialization">{{specialization}}</h5>
+    {{/if}}
+
+  </section>
+  {{/each}}
+</div>
+{{/if}}

@@ -1,0 +1,368 @@
+{
+  "basics": {
+    "name": "Tanmoy Sanyal",
+    "label": "Scientist, Protein Design || Structural biology",
+    "location": {
+      "city": "San Francisco Bay Area",
+      "countryCode": "US",
+      "region": "CA"
+    },
+    "email": "tanmoy.7989@gmail.com",
+    "phone": "(805) 637-0375",
+    "website": "https://tanmoy7989.github.io",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "tanmoy-sanyal",
+        "url": "https://www.linkedin.com/in/tanmoy-sanyal/"
+      },
+
+      {
+        "network": "Github",
+        "username": "tanmoy7989",
+        "url": "https://github.com/tanmoy7989"
+      }
+    ]
+  },
+
+
+
+  "skills": [
+    {
+      "name": "Protein Design Workflows",
+      "keywords": [
+        "Rosetta",
+        "RFDiffusion + ProteinMPNN + AlphaFold",
+        "Protein Language Models (ESM2, Amplify)"
+      ]
+    },
+
+    {
+      "name": "Molecular modeling",
+      "keywords": [
+        "openMM",
+        "LAMMPS",
+        "GROMACS",
+        "IMP",
+        "Modeller",
+        "UCSF ChimeraX",
+        "PyMOL"
+      ]
+    },
+
+    {
+      "name": "ML & MLOps",
+      "keywords": [
+        "PyTorch",
+        "PyTorch-lightning",
+        "Tensorflow-probability",
+        "PyMC3",
+        "AWS Batch"
+      ]
+    },
+
+    {
+      "name": "Languages",
+      "keywords": [
+        "Python (+Cython) (~10000+ lines)",
+        "Fortran-90 (~1000+ lines)",
+        "C++ (~4000+ lines)",
+        "Bash"
+      ]
+    }
+
+  ],
+
+
+
+
+"open-source": [
+  {
+    "name": "nnprotscan",
+    "website": "https://github.com/novonordisk-research/nnprotscan",
+    "description": "Computational scanning of chemical modifications in peptides"
+  },
+
+  {
+    "name": "nbspike",
+    "website": "https://github.com/integrativemodeling/nbspike",
+    "description": "Integrative epitope prediction"
+  },
+
+  {
+    "name": "IMP",
+    "website": "https://github.com/salilab/raindrops",
+    "description": "Crosslink guided domain discovery"
+  },
+
+  {
+    "name": "PDB-Dev deposition",
+    "website": "https://pdb-dev.wwpdb.org/entry.html?PDBDEV_00000081",
+    "description": "Structure of SMC5/6"
+  },
+
+  {
+    "name": "LAMMPS",
+    "website": "https://docs.lammps.org/pair_local_density.html",
+    "description": "Local density potential"
+  }
+],
+
+
+
+"interests": [
+  "Protein language model pipelines",
+  "Multi-specific modalities",
+  "Nanobodies",
+  "Integrative structure modeling",
+  "Non-canonical amino acids",
+  "Variational methods for Bayesian inference"
+],
+
+
+
+
+  "education": [
+    {
+      "institution": "University of California Santa Barbara",
+      "area": "Chemical Engineering",
+      "studyType": "Ph.D",
+      "location": "Santa Babara, CA, USA",
+      "startDate": "2013",
+      "specialization": "Graduate emphasis in Computational Science & Engineering (Parallel Computing & Numerical methods for ODEs / PDEs)",
+      "endDate": "2018"
+    },
+
+    {
+      "institution": "Indian Institute of Technology Kharagpur",
+      "area": "Chemical Engineering",
+      "studyType": "Masters and Bachelors of Technology (Hons.) integrated dual degree",
+      "location": "Kharagpur, WB, India",
+      "startDate": "2008",
+      "endDate": "2013"
+    }
+  ],
+
+
+
+  "work": [
+    {
+      "company": "Amgen Inc.",
+      "position": "Principal protein design scientist",
+      "website": "",
+      "startDate": "2023"
+    },
+    
+    {
+      "company": "Novo Nordisk Research Center Seattle",
+      "position": "Protein design scientist",
+      "startDate": "2022",
+      "endDate": "2023",
+      "highlights": [
+        {
+          "title": "Biologics design",
+          "description": "(i) Design of mini-proteins and antibodies for multiple therapy areas using Rosetta and AlphaFold / RFDiffusion / ProteinMPNN pipelines (ii) SAR analysis based on protein language models. (iii) Optimizing non-canonical modifications to peptides for half-life protraction."
+        },
+
+        {
+          "title": "Scientific software development",
+          "description": "Worked closely with AWS to re-tool AlphaFold and deploy a faster cloud-native in-house version for robust and scalable (~100k sequences) structure prediction; reguarly applied now in variant design within the company."
+        }
+
+      ]
+    },
+
+    {
+      "company": "Department of Bioengineering, University of California San Francisco",
+      "position": "Postdoctoral scholar, Andrej Sali lab",
+      "website": "https://salilab.org",
+      "startDate": "2019",
+      "endDate": "2022",
+      "highlights": [
+        {
+          "title": "Protein structure modeling using chemical crosslinks",
+          "description": "Homology models + chemical-crosslinks + cryo-EM data for protein complex structure modeling; graph sampling methods to extract domain information from crosslinks. Applications include SMC and DNA helicase protein families."
+        },
+        
+        {
+          "title": "Nanobody biophsyics",
+          "description": "Developed integrative docking scores for nanobody docking on target receptors (SARS-CoV-2 and variant spike proteins) using chemical crosslinking and escape mutation data. Developed design principles for increasing nanobody thermostability."
+        },
+
+        {
+          "title": "Whole cell models",
+          "description": "Developed Bayesian Network models to combine continuum scale (pharmacokinetic), particle scale (Brownian dynamics) and network scale (enzyme pathways) models of the pancreatic beta-cell into build a proof-of-concept multimodal digitial twin. Served as software lead within the Pancreatic Beta-Cell consortium (collaborating across UCSF, USC, ShanghaiTech and HUJI)"
+        }
+      ]
+    },
+
+    {
+      "company": "Chemical Engineering, University of California Santa Barbara",
+      "position": "PhD candidate, Shell lab",
+      "website": "https://theshelllab.org",
+      "startDate": "2013",
+      "endDate": "2018",
+      "highlights": [
+        {
+          "title": "Coarse-graining algorithms for bulk liquids",
+          "description": "Introduced the local density potential for structurally and thermodynamically accurate coarse-grained MD simulations of liquid-liquid phase separation, which are relatively rare in the chemical engineering literature"
+        },
+
+        {
+          "title": "Coarse-graining algorithms for protein folding using variational inference techniques",
+          "description": "Developed protein backbone models for (i) template-free folding of 200+ residue coarse-grained protein domains using MD simulations, and (ii) studying self-assembly in amyloidogenic peptides"
+        },
+
+        {
+          "title": "High Performance Computing",
+          "description": "As system administrator, set up 144 core Linux (Rocks 6.2) cluster and wrote utilities for automating (i) network-attached-storage management, and (ii) conflict-free compute resource sharing between lab members."
+        }
+      ]
+    }
+  ],
+
+
+
+
+  "volunteer": [
+    {
+      "organization": "Peer-review",
+      "summary": "Structure, Journal of Physical Chemistry, Proteins: Structure,Function and Bioinformatics, Review of Scientific Instruments, Rapid Reviews Covid-19, Life",
+      "startDate": "2019"
+    },
+
+    {
+      "organization": "Graduate Simulation Seminar Series, University of California Santa Barbara",
+      "position": "Co-founder",
+      "summary": "Conception, organization, public outreach and long-term funding support from ChE, Materials Science and Computer Science departments.",
+      "startDate": "2014",
+      "endDate": "2016"
+    }
+  ],
+
+
+
+
+  "publications": [
+    {
+      "name": "Highly synergistic combinations of nanobodies that target SARS-CoV-2 and are resistant to escape",
+      "publisher": "eLife",
+      "releaseDate": "2021",
+      "authors": "F.D. Mast, P.C. Fridy, N.E. Karen, J. Wang, E.Y. Jacobs, J.P. Olivier, T. Sanyal, et al"
+    },
+
+    {
+      "name": "Bayesian metamodeling of complex biological systems across varying representations",
+      "publisher": "PNAS",
+      "releaseDate": "2021",
+      "authors": "B. Raveh, L. Sun, K.L. White, T. Sanyal, et al"
+    },
+
+    {
+      "name": "Integrative analysis reveals unique structural and functional features of the Smc5/6 complex",
+      "publisher": "PNAS",
+      "releaseDate": "2021",
+      "authors": "F.D. Mast, P.C. Fridy, N.E. Karen, J. Wang, E.Y. Jacobs, J.P. Olivier, T. Sanyal, et al"
+    },
+
+    {
+      "name": "A hybrid, bottom up, structurally-accurate, Go-like coarse-grained protein model",
+      "publisher": "JCP",
+      "releaseDate": "2019",
+      "authors": "T. Sanyal, J. Mittal & M. Scott Shell"
+    },
+
+    {
+      "name": "Transferable coarse-grained models of liquid-liquid equilibrium using local density potentials optimized with the relative entropy",
+      "publisher": "JPC-B",
+      "releaseDate": "2018",
+      "authors": "T. Sanyal & M. Scott Shell"
+    },
+
+    {
+      "name": "Coarse-grained models using local-density potentials optimized with the relative entropy: Application to implicit solvation",
+      "publisher": "JCP",
+      "releaseDate": "2016",
+      "authors": "T. Sanyal & M. Scott Shell"
+    }
+
+  ],
+
+
+
+
+  "conferences": [
+    {
+      "name": "7th Annual Computational Drug Development for Biologics Summit",
+      "location": "Boston, MA, USA",
+      "presentation-type": "Talk",
+      "presentation-name": "Unpacking a workflow for automating protractor placement on peptides for enhanced half life",
+      "releaseDate": "Oct-2022"
+    },
+
+    {
+      "name": "Indian Biophysical Society Meeting",
+      "location": "Navi Mumbai, India",
+      "presentation-type": "Talk",
+      "presentation-name": "Integrative modeling of higher order complexes from binary binding modes",
+      "releaseDate": "Apr-2022"
+    },
+
+    {
+      "name": "Biophysical Society Annual Meeting",
+      "location": "San Francisco, CA, USA",
+      "presentation-type": "Talk",
+      "presentation-name": "Rigid body assignment in integrative determination of protein complex structures",
+      "releaseDate": "Feb-2022"
+    },
+
+    {
+      "name": "PDB50: A special symposium celebrating the 50th anniversary of the Protein Data Bank",
+      "location": "(virtiual)",
+      "presentation-type": "Poster",
+      "presentation-name": "Integrative modeling of the SMC5/6 complex",
+      "releaseDate": "May-2021"
+    },
+
+    {
+      "name": "USC Brige Institute - Pancreatic Beta Cell Consortium Retreat",
+      "location": "Catalina Island, CA, USA",
+      "presentation-type": "Workshop",
+      "presentation-name": "Meta-modeling: Probabilistic graphical models and your data",
+      "releaseDate": "Nov-2019"
+    },
+
+    {
+      "name": "Berkeley Mini Stat Mech Meeting",
+      "location": "Berkeley, CA, USA",
+      "presentation-type": "Poster",
+      "presentation-name": "Coarse-grained models for protein folding and self-assembly with the relative entropy",
+      "releaseDate": "Jan-2019"
+    }
+
+  ],
+
+
+
+
+  "awards": [
+    {
+      "title": "IUPAB best oral presentation",
+      "date": "2022",
+      "awarder": "44th Indian Biophysical Society Meeting"
+    },
+
+    {
+      "title": "Technopreneurship Promotion Programme",
+      "date": "2009",
+      "awarder": "Ministry of Science and Technology, Govt. of India",
+      "summary": "Seed money for prototype scale-up of bioreactors for algal biodiesel generation"
+    },
+
+    {
+      "title": "Jagdis Bose National Science Talent Search (JBNSTS) fellowship",
+      "date": "2009"
+    }
+  ]
+
+}

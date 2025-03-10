@@ -2,15 +2,21 @@
 <div class="container publications-container">
   {{> title value="Selected Publications"}}
     {{#each resume.publications}}
-      <ul class="minimal">
         <section class="item">
-        <h4 class="clearfix">{{name}}</h4>
-        <h5>
-          <span>{{authors}}</span>,
-          <span class="publisher-name">{{publisher}}</span>,
-          <span>{{releaseDate}}</span>
-        </h5>
-      </ul>
+          <h5>
+            {{#if authors_pre}}
+            <span>{{authors_pre}}</span>,
+            {{/if}}
+            <span><strong>{{author_me}}</strong></span>,
+            {{#if authors_post}}
+            <span>{{authors_post}}</span>,
+            {{/if}}
+            <span class="journal-name">{{name}}</span>,
+            <span>{{releaseDate}}</span>,
+            <span>{{publisher}}</span>,
+            <span>{{cc}}</span>
+          </h5>
+        </section>
     {{/each}}
 </div>
 {{/if}}
