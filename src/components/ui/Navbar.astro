@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets'
+import { settings } from '../../settings'
+import SocialIcons from './SocialIcons.astro'
+
+const { authorName, authorLabel, profileImage } = settings
+---
+<aside
+	class='px-4 pt-4 h-screen w-[20rem] bg-base-200 text-base-content flex flex-col'
+>
+	<div class='flex flex-col my-8 justify-between h-full'>
+		<div>
+			<div class='flex justify-center items-center flex-col'>
+				<img
+					class='mask mask-circle size-44 object-cover'
+					src={profileImage}
+					alt={`Profile picture of ${authorName}`}
+				/>
+				<h1 class="text-lg font-black mt-8 hidden lg:block">{authorLabel} <span>{authorName}</span></h1>
+			</div>
+			<div class='mx-4 mt-16'>
+				<ul class='space-y-4 menu grow shrink menu-md overflow-y-auto'>
+					{settings.nav.map((item) => (
+						<li>
+							<a
+								href={item.href}
+								class='text-lg hover:text-accent transition-colors'
+								target={item.external ? '_blank' : undefined}
+								rel={item.external ? 'noopener noreferrer' : undefined}
+							>
+								{item.label}
+							</a>
+						</li>
+					))}
+				</ul>
+			</div>
+		</div>
+		<div class='mx-4'>
+			<SocialIcons/>
+		</div>
+	</div>
+</aside>

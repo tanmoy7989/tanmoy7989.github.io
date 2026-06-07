@@ -1,101 +1,22 @@
-name: test resume and website build
+name: Test Build (PRs)
 
 on:
-  push:
-    branches: main
-  
-  workflow_dispatch:
-
-permissions:
-  packages: read
-  contents: read
-  attestations: write
-  id-token: write
+  pull_request:
+    branches: [main]
 
 jobs:
-  build-resume:
-    name: build resume
+  test:
     runs-on: ubuntu-latest
-
-    container:
-      image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-      volumes:
-        - ${{ github.workspace }}/resume/content:/home/content
-    
     steps:
-      - name: checkout repository
-        uses: actions/checkout@v4
-
-      - name: run docker container
-        uses: addnab/docker-run-action@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
-          options: -v ${{ github.workspace }}/resume/content:/home/content
-          run: npm run export
-      
-      - name: save resume as artifact
-        run: > 
-          mkdir -p artifacts/ &&
-          cp $(pwd)/resume/content/resume.pdf artifacts/ && 
-          cp $(pwd)/resume/content/resume.html artifacts/
-      
-      - name: upload resume artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume
-          path: artifacts/
-          retention-days: 1 
-
-  
-  build-website:
-    name: build website
-    runs-on: ubuntu-latest
-    needs: build-resume
-
-    container:
-      image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-      volumes:
-        - ${{ github.workspace }}:/home
-    
-    steps:
-      - name: checkout repository
-        uses: actions/checkout@v4
-
-      - name: download resume artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: resume
-          path: artifacts/
-      
-      - name: copy resume to website
-        run: > 
-          mv artifacts/resume.pdf $(pwd)/assets/docs/resume/ && 
-          mv artifacts/resume.html $(pwd)/assets/docs/resume/
-          
-      - name: get config file
-        run: cp $(pwd)/configs/config.deploy.yml $(pwd)/_config.yml
-
-      - name: run docker container
-        uses: addnab/docker-run-action@v3
-        with:
-          image: ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
-          options: -v ${{ github.workspace }}:/home
-          run: >
-            ls -l $(pwd) &&
-            ls -l $(pwd)/resume/content &&
-            ls -l $(pwd)/assets/docs/resume/ &&
-            bundle exec jekyll build --incremental
-      
-      - name: verify website
-        run: >
-          ls -l $(pwd) &&
-          ls -l $(pwd)/_site &&
-          ls -l $(pwd)/assets/docs/resume/ &&
-          ls -l $(pwd)/assets/docs/resume/resume.pdf &&
-          ls -l $(pwd)/assets/docs/resume/resume.html
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Copy tsanyal_resume.ts to src/data/cv.ts
+        run: mkdir -p src/data && cp resume/tsanyal_resume.ts src/data/cv.ts
+      - name: Build
+        run: npm run build
+        env:
+          SITE_URL: https://tanmoy7989.github.io

@@ -1,0 +1,4 @@
+FROM texlive/texlive:latest-small
+# tsanyal_resume.tex: pdflatex + article (geometry, hyperref, microtype, titlesec, enumitem, parskip, xcolor)
+# latest-small already includes geometry, hyperref, microtype, enumitem, parskip, and lm (Latin Modern).
+RUN tlmgr install titlesec

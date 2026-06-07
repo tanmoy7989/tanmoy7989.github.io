@@ -1,16 +1,19 @@
 #!/bin/bash
+# build_containers.sh — rebuild and push Docker images
+set -e
 
-# docker container images
-DOCKER_SITE_IMG=ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-website:latest
-DOCKER_RESUME_IMG=ghcr.io/tanmoy7989/tanmoy7989.github.io/tsanyal-resume:latest
+REGISTRY=ghcr.io/tanmoy7989/tanmoy7989.github.io
 
-# build docker images
-docker build -t $DOCKER_SITE_IMG -f dockerfiles/website .
-docker build -t $DOCKER_RESUME_IMG -f dockerfiles/resume .
+echo "→ Building website image..."
+docker build -f dockerfiles/Dockerfile.website \
+  -t $REGISTRY/tsanyal-website:latest .
 
-# login to github container registry
-docker login ghcr.io -u tanmoy7989 --password-stdin
+echo "→ Building texlive image..."
+docker build -f dockerfiles/Dockerfile.texlive \
+  -t $REGISTRY/tsanyal-texlive:latest .
 
-# push docker images
-docker push $DOCKER_SITE_IMG
-docker push $DOCKER_RESUME_IMG
+echo "→ Pushing images..."
+docker push $REGISTRY/tsanyal-website:latest
+docker push $REGISTRY/tsanyal-texlive:latest
+
+echo "✓ Done"

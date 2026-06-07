@@ -2,27 +2,37 @@
 *~
 *.sw[p_]
 
-# Ruby Gem
-**.gem
-**.bundle
-Gemfile.lock
-**/vendor/bundle
+# Node.js
+node_modules/
+npm-debug.log*
 
-# Node.js and NPM
-**/node_modules
-**package-lock.json
-**public
-**npm-debug.log*
-**codekit-config.json
+# Astro
+dist/
+.astro/
+src/data/cv.ts
+
+# LaTeX build artifacts (PDF is moved to public/)
+resume/resume.pdf
+resume/resume.aux
+resume/resume.log
+resume/resume.out
+resume/resume.fdb_latexmk
+resume/resume.fls
+resume/resume.synctex.gz
+resume/resume.bcf
+resume/resume.run.xml
+resume/tsanyal_resume.aux
+resume/tsanyal_resume.log
+resume/tsanyal_resume.out
+resume/tsanyal_resume.pdf
 
 # macOS
-**.DS_Store
+.DS_Store
 
-# Jekyll generated files
-.jekyll-cache
-.jekyll-metadata
-.sass-cache
-_asset_bundler_cache
+# Editor
+.vscode/
 
-
-
+# Legacy Jekyll (archived)
+_jekyll_archive/.jekyll-cache
+_jekyll_archive/.jekyll-metadata
+_jekyll_archive/.sass-cache

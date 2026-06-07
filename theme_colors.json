@@ -1,0 +1,14 @@
+{
+  "_comment": "Set accent to any key in colors. Add your own named colors as needed.",
+  "accent": "teal",
+  "colors": {
+    "rose": "#e879a8",
+    "blush": "#f9a8d4",
+    "berry": "#db2777",
+    "coral": "#fb7185",
+    "amber": "#f59e0b",
+    "teal": "#14b8a6",
+    "ocean": "#0ea5e9",
+    "violet": "#8b5cf6"
+  }
+}

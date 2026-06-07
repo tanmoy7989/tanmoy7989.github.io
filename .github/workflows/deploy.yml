@@ -1,0 +1,73 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Compile LaTeX resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: resume
+          root_file: tsanyal_resume.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -jobname=resume
+          post_compile: "pdflatex -interaction=nonstopmode -jobname=resume tsanyal_resume.tex"
+
+      - name: Move resume.pdf to public/ and clean aux files
+        run: |
+          find resume -maxdepth 1 \( -name '*.aux' -o -name '*.log' -o -name '*.out' \) -delete
+          if [ ! -f resume/resume.pdf ]; then
+            echo "✗ resume/resume.pdf was not produced"
+            exit 1
+          fi
+          mkdir -p public
+          mv resume/resume.pdf public/resume.pdf
+
+      - name: Copy tsanyal_resume.ts to src/data/cv.ts
+        run: mkdir -p src/data && cp resume/tsanyal_resume.ts src/data/cv.ts
+
+      - name: Build Astro site
+        run: npm run build
+        env:
+          SITE_URL: https://tanmoy7989.github.io
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
