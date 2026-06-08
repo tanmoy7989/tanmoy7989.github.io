@@ -1,9 +1,9 @@
 #!/bin/bash
-# Compile tsanyal_resume.tex → ../public/resume.pdf and remove LaTeX aux files.
+# Compile resume/tsanyal_resume.tex → public/resume.pdf and remove LaTeX aux files.
 set -e
 
-RESUME_DIR="$(cd "$(dirname "$0")" && pwd)"
-ROOT="$(cd "$RESUME_DIR/.." && pwd)"
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+RESUME_DIR="$ROOT/resume"
 REGISTRY=ghcr.io/tanmoy7989/tanmoy7989.github.io
 DOCKER_TEXLIVE=$REGISTRY/tsanyal-texlive:latest
 TEX_FILE=tsanyal_resume.tex

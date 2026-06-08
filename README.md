@@ -1,15 +1,30 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# tanmoy7989.github.io
 
+Personal website built with the [astro_academia](https://github.com/maiobarbero/astro_academia) template.
 
-This is my personal website based on the immensely popular [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes) theme by [Michael Rose](https://github.com/mmistakes). 
+## Resume
 
-I borrowed several modifications to the css content from [this very helpful blog post](https://www.cross-validated.com/Personal-website-with-Minimal-Mistakes-Jekyll-Theme-HOWTO-Part-II/) by Katerina Bosko.
+Resume source files live in [`resume/`](resume/):
 
-This website also hosts my resume. I modified the json-resume theme [caffeine](https://github.com/kelyvin/jsonresume-theme-caffeine) and incorporated it within a sub-folder `resume/jsonresume-theme-cortado`
+- **`tsanyal_resume.tex`** — LaTeX source; compiled to `public/resume.pdf` via `scripts/render_resume.sh`.
+- **`tsanyal_resume.ts`** — structured CV data for the web CV page (copied to `src/data/cv.ts` at build time).
 
-The major heavy lifting is done through two containerized serrvices:
-- building formatted resume from json content: using node and `jsonresume-theme-cortado` for rendering html and `puppeteer` for converting to pdf. PDF conversion in an (node:alpine) docker container is tricky, since it will generally have several fonts missing, giving the final product an ugly look. I tracked down the fonts I was missing manually and downloaded them from google-fonts. You can find these in `resume/jsonresume-theme-cortado/required_fonts`. 
+## Research content
 
-- website building: To test this locally, I use a ruby docker. When deployed, actions automatically provided by github takes care of this. I do have a build pipeline in `.github/workflows/test_build.yml` that checks resume + website build, but for now it is mostly for my sanity. The process is to run `./test_build.sh` locally to preview changes (add `-r` to recompile the resume), then push to `main` and let GitHub Actions deploy.
+Research project write-ups are in [`src/content/Research/`](src/content/Research/).
 
-If you find the combined website + resume hosting useful, feel free to fork this repository, but with appropriate citations.
+## Theme colors
+
+[`theme_colors.json`](theme_colors.json) holds human-readable color names and values that control site-wide accents and highlights.
+
+## Docker images
+
+[`scripts/build_containers.sh`](scripts/build_containers.sh) rebuilds and pushes the website and TeX Live Docker images to GHCR. Run it only when you change `dockerfiles/` (e.g. after updating the TeX Live setup).
+
+## Local preview
+
+[`scripts/test_build.sh`](scripts/test_build.sh) starts the Astro dev server to preview site changes. Run `./scripts/test_build.sh` from the repo root; add `-r` to recompile the PDF resume first (`./scripts/test_build.sh -r`).
+
+## Deploy
+
+Push to `main` on GitHub — the Actions workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and deploys the site to GitHub Pages.

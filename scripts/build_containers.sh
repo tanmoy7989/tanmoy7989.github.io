@@ -2,7 +2,10 @@
 # build_containers.sh — rebuild and push Docker images
 set -e
 
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 REGISTRY=ghcr.io/tanmoy7989/tanmoy7989.github.io
+
+cd "$ROOT"
 
 echo "→ Building website image..."
 docker build -f dockerfiles/Dockerfile.website \
