@@ -2,17 +2,17 @@
 %% Compile with: pdflatex tsanyal_resume.tex
 %% Requires: lmodern, geometry, enumitem, titlesec, hyperref, microtype, xcolor, parskip
 
-\documentclass[10pt, letterpaper]{article}
+\documentclass[9pt, letterpaper]{article}
 
 % ── Packages ──────────────────────────────────────────────────────────────────
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage[
-  top=0.8in,
-  bottom=0.8in,
-  left=0.9in,
-  right=0.9in
+  top=0.75in,
+  bottom=0.75in,
+  left=0.85in,
+  right=0.85in
 ]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -76,13 +76,10 @@
 %% ── HEADER ──────────────────────────────────────────────────────────────────
 {\fontsize{20}{24}\selectfont\color{accent}\textbf{Tanmoy Sanyal}}
 
-\vspace{4pt}
-{\large\textit{Scientist, Protein Design \& Structural Biology}}
-
 \vspace{5pt}
 {\color{muted}San Francisco Bay Area, CA}
 
-\vspace{6pt}
+\vspace{4pt}
 {\small
   \href{mailto:tanmoy.7989@gmail.com}{tanmoy.7989@gmail.com}\contactsep
   (805) 637-0375\contactsep
@@ -91,131 +88,103 @@
   \href{https://github.com/tanmoy7989}{GitHub}
 }
 
-\vspace{10pt}
+\vspace{4pt}
 {\color{muted}\linespread{1.08}\selectfont
-Computational scientist with over a decade of experience developing physics-based and
-machine learning methods for protein design and structural biology, with a track record
-spanning academic research, biotech, and large pharma. Specialized in MLOps, multispecific
-molecule design, and integrative structural modeling. Demonstrated ability to translate
-rigorous scientific methods into scalable, cloud-native production systems.
-\par}
+
+\begin{itemize}
+    \item Computational biology/chemistry/applied-ML generalist with 10+ years of experience developing physics-based and ML methods for protein design and structural biology, spanning academia, biotech, and pharma.
+
+    \item Effective communicator skilled at translating complex technical concepts across disciplines into actionable insights for stakeholders and collaborators.
+\end{itemize}
 
 %% ── EDUCATION ───────────────────────────────────────────────────────────────
 \section{Education}
 
-\textbf{University of California, Santa Barbara} \\
-\jobtitle{Ph.D., Chemical Engineering} --- Graduate Emphasis in Computational Science \& Engineering (HPC) \hfill \daterange{2013--2018}
+\textbf{University of California, Santa Barbara} \hfill \daterange{2013--2018} \\
+\jobtitle{Ph.D., Chemical Engineering (graduate emphasis in high performance computing)}
 
-\vspace{5pt}
-\textbf{Indian Institute of Technology, Kharagpur} \\
-\jobtitle{Integrated M.Tech \& B.Tech (Hons.), Chemical Engineering} \hfill \daterange{2008--2013}
+\vspace{6pt}
+\textbf{Indian Institute of Technology, Kharagpur} \hfill \daterange{2008--2013} \\
+\jobtitle{Integrated M.Tech \& B.Tech (Hons.), Chemical Engineering}
 
 %% ── EXPERIENCE ──────────────────────────────────────────────────────────────
 \section{Experience}
 
 \jobheader{Amgen Inc.}{South San Francisco, CA}{%
-  \roletime{Principal Protein Design Scientist}{Apr 2024--Present}
-  \roletime{Senior Protein Design Scientist}{Oct 2023--Mar 2024}
-  \roletime{Protein Design Scientist}{Jan 2022--Oct 2023}
+  \jobtitle{Senior Scientist (2023 -- 2024), Principal Scientist (2024 -- Present)} \par\vspace{1pt}
 }
 \begin{itemize}
-  \item \textbf{Multispecifics design platform:} Developed cloud-native, highly parallelized
-    ODE solvers for pharmacokinetic modeling of bispecific molecules; deployed via ML
-    regression models achieving a \textbf{50$\times$ speedup}.
+  \item \textbf{Design of multi-specific antibodies}: Extended antibody avidity models to bi-specific formats and heterogeneous receptor cell-surface morphologies through (AI co-pilot paired) pen-paper statistical mechanistic methods. These models are competitive with sequence $\to$ avidity ML approaches.
 
-  \item \textbf{Statistical mechanics of multispecifics:} Translated statistical mechanical
-    models of superselectivity (originally developed for multivalent ligands) to multispecific
-    molecules; currently undergoing experimental validation and benchmarking on bispecific
-    candidates.
+  \item \textbf{Data-efficient ML for property prediction}: Developed train/test split algorithms for small, imbalanced datasets preventing data leakage and confounding features; \textbf{rescued 4+ legacy datasets} to build ML screens (protein language model embeddings + classification heads) for \textbf{antibody hotspots}, \textbf{target protein expression}, and \textbf{nanobody thermo-stability}.
 
-  \item \textbf{MLOps architecture:} Built Amgen's first end-to-end, cloud-native MLOps
-    pipeline for supervised biophysical property prediction from protein sequences, now used
-    across \textbf{8+ antibody design projects}. Mentored junior data scientists in
-    thermostability prediction workflows.
+  \item \textbf{Neural ODEs for systems-biology parameter estimation}: Demonstrated parameter estimation in \textbf{large ODE networks (${\sim}$50--60 equations)} of QSP models using Neural ODEs; built end-to-end pipelines for rate estimation in Bi-specific T-Cell Engager (BiTE) binding kinetics.
 
-  \item \textbf{In-silico display library design:} Developed linear-programming algorithms to
-    optimize degenerate codon libraries using protein language models. Set an internal record
-    for fastest request-to-delivery (${\sim}$3~days) for a 1M+ diverse antibody library;
-    applied to engineer cross-reactivity across 2 therapeutic areas.
+  \item \textbf{In-silico display library design}: Linear-programming algorithms to optimize degenerate codon libraries using protein language models; \textbf{fastest request-to-delivery (${\sim}$3~days)} for two 1M+ diverse antibody libraries, enabling cross-reactivity engineering across 2 therapeutic areas.
 
-  \item \textbf{Biologics design:} Designed mini-binders for a rare disease target using
-    Rosetta-ddG and the AlphaFold, RFDiffusion, and ProteinMPNN workflow. Developed an
-    active-learning pipeline (Gaussian process regression) yielding a
-    \textbf{20$\times$} affinity improvement over 3 design-and-screen iterations.
-
-  \item \textbf{AlphaFold cloud deployment:} Collaborated with AWS to re-tool open-source
-    AlphaFold-2 into a scalable cloud-native version supporting ${\sim}$100k sequences; now
-    in regular use for variant design.
+  \item \textbf{MLOps}: Built Amgen's first cloud (Databricks) - native MLOps framework for supervised biophysical property prediction from protein sequences; now in use across \textbf{8+ antibody design projects}. Mentored junior data scientists in onboarding this framework.
 \end{itemize}
 
-\vspace{5pt}
-\jobheader{Novo Nordisk Research Center Seattle}{Seattle, WA}{%
+\vspace{6pt}
+\jobheader{Novo Nordisk Research Center Seattle Inc.}{Seattle, WA}{%
   \roletime{Protein Design Scientist}{2022--2023}
 }
 \begin{itemize}
-  \item \textbf{Peptide modifications for half-life extension:} Developed a computational
-    method for systematically scanning PEGylation sites on peptides for half-life
-    protraction. Published and open-sourced the method with a benchmark on GLP-1 analogs
-    relevant to anti-obesity therapeutics.
+  \item \textbf{Peptide modifications for half-life extension}: Computational screens for scanning PEGylation sites on peptides for half life extension; published and open-sourced with a benchmark on GLP-1 analogs for anti-obesity therapeutics.
+
+  \item \textbf{Biologics design}: Mini-binder design using RFDiffusion $\to$ ProteinMPNN $\to$ AlphaFold-2; active-learning pipeline (Gaussian process regression) achieving 20x affinity improvement over 3 design--experiment iterations.
+
+  \item \textbf{Cloud infrastructure}: Re-tooled open-source AlphaFold-2 inference with AWS for scalable (${\sim}$100k sequences) in-house structure prediction; now standard in designed-binder screening.
 \end{itemize}
 
-\vspace{5pt}
+\vspace{6pt}
 \jobheader{University of California, San Francisco}{Sali Lab}{%
   \roletime{Postdoctoral Scholar}{Jan 2019--Jan 2022}
 }
 \begin{itemize}
-  \item \textbf{Nanobody biophysics \& vaccine design:} Developed a protein--protein docking
-    score for nanobody interactions with the SARS-CoV-2 Spike protein using chemical
-    crosslinking and escape mutation data; identified vulnerable and resilient epitopes across
-    variants of concern. Also performed MD simulation studies elucidating the effects of
-    framework mutations on distal CDR3 residues.
+  \item \textbf{Nanobody biophysics}: Protein--protein docking score for nanobody--antigen interactions using crosslink and escape mutation data; identified \textbf{vulnerable and resilient epitopes across SARS-CoV-2 variants}; revealed \textbf{framework mutations modulating distal CDR3 conformations} via atomistic MD simulations.
 
-  \item \textbf{Protein structure modeling from crosslinks:} Developed graph-sampling
-    algorithms to extract domain boundaries from chemical crosslinking data; published the
-    first coarse-grained structure of the full SMC5/6 protein complex.
+  \item \textbf{Integrative structure modeling}: Graph-sampling algorithms extracting domain boundaries in large protein complexes from crosslink data; published the \textbf{first coarse-grained structure }of the SMC5/6-NSE-{2,5,6} pentameric complex.
 
-  \item \textbf{Whole-cell digital twin:} Developed Bayesian networks combining
-    pharmacokinetic, Brownian dynamics, and enzyme-pathway models of the pancreatic
-    beta-cell into a proof-of-concept multimodal digital twin. Served as software lead in
-    the Pancreatic Beta-Cell Consortium (UCSF/USC).
+  \item \textbf{Whole-cell digital twin}: Bayesian network models combining pharmacokinetic, Brownian dynamics, and enzyme-pathway models of the pancreatic beta-cell; software lead for the Pancreatic Beta-Cell Consortium (UCSF/USC).
 \end{itemize}
 
-\vspace{5pt}
+\vspace{6pt}
 \jobheader{University of California, Santa Barbara}{Shell Lab}{%
   \roletime{Ph.D.\ Researcher}{2013--2018}
 }
 \begin{itemize}
-  \item \textbf{Coarse-graining for phase separation:} Introduced the local density potential
-    for structurally and thermodynamically accurate coarse-grained MD simulations of
-    liquid--liquid phase separation.
+  \item \textbf{Coarse-grained (CG) molecular models of liquids}: Local-density-dependent force field for thermodynamically accurate CG simulations of liquid--liquid phase separation of hydrophobes in water.
 
-  \item \textbf{Protein folding via variational inference:} Developed backbone models for
-    template-free folding of 200+ residue protein domains using MD simulations, and for
-    studying self-assembly in amyloidogenic peptides.
-
-  \item \textbf{HPC cluster administration:} Set up and administered a 144-core Linux
-    (Rocks~6.2) cluster; wrote utilities for automated resource sharing among lab members.
+  \item \textbf{Variational inference for protein folding}: CG backbone force fields for \textbf{template-free folding of 200+ residue domains} via information-theoretic ensembling of MD data; applied to self-assembly in amyloidogenic peptides.
 \end{itemize}
 
 %% ── COMPUTATIONAL SKILLS ────────────────────────────────────────────────────
 \section{Computational Skills}
 
-\begin{tabular}{@{}>{\bfseries\color{accent}}l@{\hspace{0.75em}}>{\raggedright\arraybackslash}p{\dimexpr\linewidth-1.55in-2\tabcolsep}@{}}
-  Protein Design      & Rosetta, RFDiffusion, ProteinMPNN, AlphaFold, ESM2, Amplify (protein language models) \\
-  Molecular Modeling  & OpenMM, LAMMPS, GROMACS, IMP, Modeller, UCSF ChimeraX, PyMOL \\
-  ML / MLOps          & PyTorch, PyTorch-Lightning, TensorFlow-Probability, PyMC3, MLFlow, AWS Batch \\
-  Languages           & Python (+Cython, 10k+ lines), C++ (${\sim}$4k lines), Fortran-90 (${\sim}$1k lines), Bash \\
-\end{tabular}
+\begin{itemize}
+    \item \textbf{ML on biological data}: PyTorch-focused modeling of protein function from sequence/structure, and systems-biology temporal profiles; learning from sparse/imbalanced data.
+    
+    \item \textbf{Mechanistic modeling}: Rapid prototyping of binding, avidity, selectivity, and stability via statistical-mechanics-based tractable likelihood models.
+    
+    \item \textbf{Compute}: Cloud (AWS Batch) and on-prem (Slurm) GPU training and orchestration.
+    
+    \item \textbf{Comp.\ chem/bio stack}: RFDiffusion $\to$ ProteinMPNN $\to$ AlphaFold-2, Rosetta, OpenMM, LAMMPS, GROMACS, IMP.
+    
+    \item \textbf{ML stack}: Scikit-learn, PyTorch, Lightning, TensorFlow-Probability, PyMC3, MLFlow, Hydra, Dask, Lux/Flux (Julia).
+\end{itemize}
 
 %% ── OPEN-SOURCE SOFTWARE ────────────────────────────────────────────────────
-\section{Open-Source Software}
+\section{Open-Source Contributions}
 
 \begin{itemize}
-  \item \textbf{nnprotscan} --- Computational scanning of chemical modifications in peptides.
-  \item \textbf{nbspike} --- Integrative epitope prediction for nanobody--antigen interactions.
-  \item \textbf{IMP-raindrops} --- Crosslink-guided domain discovery within the IMP framework.
-  \item \textbf{PDB-Dev deposition tools} --- Structural deposition utilities for the SMC5/6 complex.
-  \item \textbf{LAMMPS local density potential} --- Plugin implementing the local density coarse-graining potential.
+  \item \href{https://github.com/novonordisk-research/nnprotscan}{\textbf{nnprotscan}} --- Computational scanning of chemical modifications in peptides.
+  
+  \item \href{https://github.com/integrativemodeling/nbspike}{\textbf{nbspike}} --- Integrative epitope prediction for nanobody--antigen interactions.
+  
+  \item \href{https://pdb-ihm.org/entry.html?9A19}{\textbf{PDB-Dev deposition}} --- Integrative structure of the SMC-5/6-NSE-{2,5,6} pentamer complex.
+  
+  \item \href{https://docs.lammps.org/pair_local_density.html}{\textbf{Local density potentials}} --- LAMMPS plugin for local-density CG molecular mechanics.
 \end{itemize}
 
 %% ── SELECTED PUBLICATIONS ──────────────────────────────────────────────────
@@ -227,34 +196,26 @@ rigorous scientific methods into scalable, cloud-native production systems.
     Structure-Based Computational Scanning of Chemical Modification Sites in Biologics.
     \textit{ACS Omega}, 9(34), 36787--36794, 2024.
 
-  \item F.D.~Mast, P.C.~Fridy, N.E.~Karen, J.~Wang, E.Y.~Jacobs, J.P.~Olivier,
-    \textbf{T.~Sanyal}, et al.\ Highly synergistic combinations of nanobodies that target
-    SARS-CoV-2 and are resistant to escape. \textit{eLife}, 10: e73027, 2021.
+  \item F.D.~Mast, P.C.~Fridy, et al., \textbf{T.~Sanyal}\ et al.
+    Highly synergistic nanobody combinations targeting SARS-CoV-2 resistant to escape.
+    \textit{eLife}, 10: e73027, 2021.
 
-  \item B.~Raveh, L.~Sun, K.L.~White, \textbf{T.~Sanyal}, et al.\
+  \item B.~Raveh, L.~Sun, K.L.~White, \textbf{T.~Sanyal}, et al.
     Bayesian metamodeling of complex biological systems across varying representations.
     \textit{PNAS}, 118(35) e2104559118, 2021.
 
-  \item Y.~Yu, S.~Li, Z.~Ser, \textbf{T.~Sanyal}, et al.\
-    Integrative analysis reveals unique structural and functional features of the Smc5/6
-    complex. \textit{PNAS}, 118(19) e2026844118, 2021.
+  \item Y.~Yu, S.~Li, Z.~Ser, \textbf{T.~Sanyal}, et al.
+    Integrative analysis of the unique structural and functional features of the Smc5/6 complex.
+    \textit{PNAS}, 118(19) e2026844118, 2021.
 
   \item \textbf{T.~Sanyal}, J.~Mittal and M.~Scott~Shell.
     A hybrid, bottom-up, structurally-accurate, Go-like coarse-grained protein model.
     \textit{J.\ Chem.\ Phys.}, 151(4): 044111, 2019.
 
   \item \textbf{T.~Sanyal} and M.~Scott~Shell.
-    Coarse-grained models using local-density potentials optimized with the relative
-    entropy: Application to implicit solvation.
+    Coarse-grained models using local-density potentials optimized with the relative entropy.
     \textit{J.\ Chem.\ Phys.}, 145, 034109, 2016.
 \end{itemize}
 }
-
-%% ── SERVICE & PEER REVIEW ──────────────────────────────────────────────────
-\section{Service \& Peer Review}
-
-\textit{Reviewer} (2019--Present): \textit{Structure}; \textit{Journal of Physical
-Chemistry}; \textit{Proteins: Structure, Function and Bioinformatics};
-\textit{Review of Scientific Instruments}; \textit{Rapid Reviews COVID-19}; \textit{Life}.
 
 \end{document}

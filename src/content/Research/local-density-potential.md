@@ -1,11 +1,9 @@
 ---
-title: "Local Density Potential for Liquid-Liquid Phase Separation"
-description: "Introduced the local density potential for structurally and thermodynamically accurate CG MD simulations of liquid-liquid phase separation."
+title: "Local Density Potentials for Liquid-Liquid Phase Separation"
+description: "Introduced the local density potential for structurally and thermodynamically accurate coarse-grained MD simulations of liquid-liquid phase separation."
 year: "2016"
 tags: ["coarse-graining", "molecular dynamics", "LAMMPS", "phase separation"]
-venue: "UCSB Shell lab / J. Chem. Phys. 2016"
-paperUrl: "https://doi.org/10.1063/1.4959965"
-codeUrl: "https://github.com/tanmoy7989/lammps_local_density"
+venue: "Shell lab, UCSB"
 img: "/images/research/localdensity.png"
 ---
 

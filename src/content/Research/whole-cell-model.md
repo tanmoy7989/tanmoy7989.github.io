@@ -3,7 +3,7 @@ title: "Multimodal Digital Twin of the Pancreatic Beta-Cell"
 description: "Bayesian networks combining continuum, particle, and network-scale models of the pancreatic beta-cell. Software lead for the Pancreatic Beta-Cell Consortium (UCSF/USC)."
 year: "2021"
 tags: ["whole-cell modeling", "Bayesian networks", "systems biology"]
-venue: "UCSF Sali lab / PNAS 2021"
+venue: "Sali lab, UCSF"
 paperUrl: "https://doi.org/10.1073/pnas.2104559118"
 img: "/images/research/metamodeling.png"
 ---

@@ -3,8 +3,7 @@ title: "Coarse-Grained Protein Folding via Variational Inference"
 description: "Protein backbone models for template-free folding of 200+ residue CG protein domains and self-assembly in amyloidogenic peptides using variational inference techniques."
 year: "2019"
 tags: ["coarse-graining", "protein folding", "variational inference", "amyloids"]
-venue: "UCSB Shell lab / J. Chem. Phys. 2019"
-paperUrl: "https://doi.org/10.1063/1.5044542"
+venue: "Shell lab, UCSB"
 img: "/images/research/protein_model.png"
 ---
 

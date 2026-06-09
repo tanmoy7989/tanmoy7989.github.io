@@ -15,7 +15,7 @@ Research project write-ups are in [`src/content/Research/`](src/content/Research
 
 ## Theme colors
 
-[`theme_colors.json`](theme_colors.json) holds human-readable color names and values that control site-wide accents and highlights.
+In [`src/settings.ts`](src/settings.ts), `themeColors` holds named accent colors; set `themeColors.accent` to any key in `themeColors.colors`.
 
 ## Docker images
 
